@@ -59,6 +59,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_ContactUsController" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_DivisionsSearchController" />
@@ -234,6 +235,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_ContactUsPage" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="MyProfilePage" />
