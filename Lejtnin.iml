@@ -68,6 +68,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_SoqlUtil" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LexInputFieldCompCtrl" />
@@ -502,6 +503,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="LooneyTunes" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ServiceCloud" />
@@ -1330,6 +1332,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Divisions" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Getting_Started_With_Survey_Force" />
