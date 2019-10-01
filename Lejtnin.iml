@@ -1599,6 +1599,7 @@
                           <MetadataEntry>
                             <option name="name" value="unfiled$public/Email_survey_template" />
                             <option name="parentFolder" value="unfiled$public" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="unfiled$public/MarketingProductInquiryResponse" />
@@ -1771,6 +1772,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="LTS_LeadMining" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Skills_based_routing" />
@@ -3484,6 +3486,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Lead" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
