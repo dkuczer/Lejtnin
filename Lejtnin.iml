@@ -65,6 +65,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_SkillsBasedRouting" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_SoqlUtil" />
@@ -322,9 +323,11 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Case" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -382,9 +385,11 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Case" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -507,6 +512,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ServiceCloud" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Survey_Force" />
@@ -1586,6 +1592,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="EmailToCase" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -1676,6 +1683,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Chat_Agent" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -1691,6 +1699,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Chat_Agent" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -1716,6 +1725,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Case" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -1739,6 +1749,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Case_Record_Page" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Divisions" />
@@ -1795,6 +1806,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Skills_based_routing" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2380,6 +2392,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Chat_Agent" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2391,6 +2404,7 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="live_agent_setup_flow" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2466,12 +2480,15 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Knowledge_LSF_Permission_Set" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Live_Agent_Setup_Flow" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Omni_Setup_Flow" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2499,12 +2516,15 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Chat_Agent" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Tier_1_Agents" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="default_presence_config" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2664,15 +2684,19 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Chats" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hight_Priority" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Inquiry" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Normal_Priority" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2684,9 +2708,11 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Chats" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Normal_Priority" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2935,9 +2961,11 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Omni_Setup_Flow_Cases" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="sfdc_liveagent" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2949,15 +2977,19 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Available_Case" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Available_Chat" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Busy" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="On_Break" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -3158,12 +3190,15 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Claims" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Multiskill" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Technical" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
