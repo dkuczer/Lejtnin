@@ -1,0 +1,12 @@
+<aura:component description="LTS_MapMultipleLocations" implements="flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="mapMarkers" type="Object[]"/>
+    <aura:attribute name="zoomLevel" type="Integer"/>
+    <aura:attribute name="defaultZoomLevel" type="Integer"/>
+    <aura:handler event="c:LTS_DivisionsSearchEvent" action="{!c.updateMarkersList}"/>
+    <aura:handler event="c:LTS_DivisionClickedForDetails" action="{!c.updateMarker}"/>
+    <aura:handler event="c:LTS_ClearContentEvent" action="{!c.clearMarkers}"/>
+
+    <lightning:map class="contentContainer" mapMarkers="{!v.mapMarkers }" zoomLevel="{!(zoomLevel > 0)? v.zoomLevel: ''}" listView="hidden"/>
+
+</aura:component>

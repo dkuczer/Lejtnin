@@ -1,0 +1,25 @@
+<aura:component description="LTS_DivisionDetailsView" implements="flexipage:availableForAllPageTypes">
+    <aura:handler event="c:LTS_DivisionClickedForDetails" action="{!c.showDetails}"/>
+    <aura:handler event="c:LTS_ClearContentEvent" action="{!c.clearContent}"/>
+    <aura:attribute name="accountRecord" type="Account"></aura:attribute>
+    <aura:if isTrue="{!v.accountRecord != null}">
+        <lightning:card class="slds-p-around_small" title="Division Details">
+            <lightning:recordViewForm objectApiName="Account" recordId="{!v.accountRecord.Id}">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-align-content-center">
+                        <lightning:outputField class="" fieldName="Name"/>
+                        <lightning:outputField fieldName="Phone"/>
+                        <lightning:outputField fieldName="Website"/>
+                        <lightning:outputField fieldName="Rating"/>
+
+                    </div>
+                    <div class="slds-col">
+                        <lightning:outputField fieldName="BillingCountry"/>
+                        <lightning:outputField fieldName="BillingCity"/>
+                        <lightning:outputField fieldName="BillingStreet"/>
+                    </div>
+                </div>
+            </lightning:recordViewForm>
+        </lightning:card>
+    </aura:if>
+</aura:component>

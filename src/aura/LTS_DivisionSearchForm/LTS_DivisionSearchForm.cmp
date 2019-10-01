@@ -1,0 +1,27 @@
+<aura:component description="LTS_DivisionSearchForm" implements="flexipage:availableForAllPageTypes" controller="LTS_DivisionsSearchController">
+<!--    <aura:attribute name="message" type="String"/>-->
+    <aura:attribute name="divisionName" type="String"/>
+    <aura:attribute name="divisionCity" type="String"/>
+    <aura:attribute name="divisionStreet" type="String"/>
+    <aura:registerEvent name="divisionSearch" type="c:LTS_DivisionsSearchEvemt"/>
+    <aura:registerEvent name="clearContent" type="c:LTS_ClearContentEvent"/>
+
+    <c:LTS_CustomToast aura:id="toastCmp"/>
+
+    <lightning:card title="{!$Label.c.LTS_DivisionSearchComponent}" class="slds-p-around_small contentContainer">
+        <lightning:input name="input" value="{!v.divisionName}" label="{!$Label.c.LTS_DivisionName}" />
+            <lightning:input name="input" value="{!v.divisionCity}" label="{!$Label.c.LTS_City}" />
+        <lightning:input name="input" value="{!v.divisionStreet}" label="{!$Label.c.LTS_Street}" />
+
+        <div class="slds-text-align--center">
+            <lightning:button label="Search"
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.clickSearch}"/>
+            <lightning:button label="Clear"
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.clickClear}"/>
+        </div>
+    </lightning:card>
+</aura:component>

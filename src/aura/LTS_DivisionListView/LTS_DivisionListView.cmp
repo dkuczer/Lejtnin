@@ -1,0 +1,37 @@
+<aura:component description="LTS_DivisionListView" implements="flexipage:availableForAllPageTypes">
+    <aura:registerEvent name="divisionClicked" type="c:LTS_DivisionClickedForDetails"/>
+    <aura:handler event="c:LTS_DivisionsSearchEvent" action="{!c.handleUpdateStudents}"/>
+    <aura:handler event="c:LTS_ClearContentEvent" action="{!c.clearContent}"/>
+    <aura:attribute name="divisionsList" type="List"></aura:attribute>
+    <lightning:card title="Divisions list view" class="slds-p-around_small">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" >
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate">{!$Label.c.LTS_DivisionName}</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" >{!$Label.c.LTS_Country}</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">{!$Label.c.LTS_City}</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">{!$Label.c.LTS_Street}</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.divisionsList}" var="division" indexVar="index">
+                        <tr onclick="{!c.clickDivision}">
+                            <td id="{!index}">{!division.Name}</td>
+                            <td id="{!index}">{!division.BillingCountry}</td>
+                            <td id="{!index}">{!division.BillingCity}</td>
+                            <td id="{!index}">{!division.BillingStreet}</td>
+                        </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </lightning:card>
+
+</aura:component>

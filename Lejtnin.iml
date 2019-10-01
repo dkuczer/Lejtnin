@@ -62,6 +62,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_DivisionsSearchController" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_SkillsBasedRouting" />

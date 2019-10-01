@@ -1,0 +1,7 @@
+<aura:component description="LTS_CustomToast">
+    <aura:method name="showToast" access="global" action="{!c.showToast}" >
+        <aura:attribute name="type" type="String"/>
+        <aura:attribute name="title" type="String"/>
+        <aura:attribute name="message" type="String"/>
+    </aura:method>
+</aura:component>

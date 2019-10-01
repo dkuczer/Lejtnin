@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="LTS_DivisionsSearchEvent">
+    <aura:attribute name="divisionsList" type="List"></aura:attribute>
+</aura:event>
