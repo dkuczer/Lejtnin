@@ -7,6 +7,7 @@ public with sharing class LTS_SoqlUtil {
     private Map<String, String> searchPickFieldsWithValues;
     private Map<String, List<String>> searchPickFieldsWithValuesList;
 
+
     private String tableName;
     private String queryString = '';
     private String sortOrder = 'ASC';
