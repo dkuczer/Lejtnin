@@ -5,8 +5,8 @@
 global class AutocreatedRegHandler1570531922773 implements Auth.RegistrationHandler{
 	private static final String ORG_SUFFIX = '.sso.badge.org';
 	private static final String DEFAULT_ACCOUNTNAME = 'Customer';
-	private static final String EXTERNAL_USER_PROFILE = 'Customers';
-	private static final String INTERNAL_USER_PROFILE = 'Standard User';
+	private static final String EXTERNAL_USER_PROFILE = 'LTS Community User';
+	private static final String INTERNAL_USER_PROFILE = 'LTS Community User';
 	private static final String TZSID = [SELECT timezonesidkey from User where profile.name = 'System Administrator' LIMIT 1].timezonesidkey;
 
 /**
@@ -91,7 +91,10 @@ global class AutocreatedRegHandler1570531922773 implements Auth.RegistrationHand
 			// Keeping it modular, we initialize the user in another method
 			User u = createUser(data,p);
 
+
+
 			u.contactId = contactId;
+			
 			return u;
 		} else {
 			//This is not a community, so we Assign an internal profile
@@ -100,6 +103,9 @@ global class AutocreatedRegHandler1570531922773 implements Auth.RegistrationHand
 
 			// Keeping it modular, we initialize the user in another method
 			User u = createUser(data,p);
+
+
+
 
 			return u;
 		}
@@ -179,6 +185,8 @@ global class AutocreatedRegHandler1570531922773 implements Auth.RegistrationHand
 		u.emailEncodingKey = 'UTF-8';
 		u.timeZoneSidKey = TZSID;
 		u.profileId = p.Id;
+
+		System.debug(u);
 		return u;
 	}
 }
