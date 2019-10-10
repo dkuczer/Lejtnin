@@ -94,7 +94,7 @@ global class AutocreatedRegHandler1570531922773 implements Auth.RegistrationHand
 
 
 			u.contactId = contactId;
-			
+
 			return u;
 		} else {
 			//This is not a community, so we Assign an internal profile
