@@ -160,6 +160,18 @@
                           <MetadataEntry>
                             <option name="name" value="viewSurveyResultsComponentController" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CustomSearchController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ProductImageController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_generateDocumentDistribution" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -363,6 +375,30 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="searchDivisionsFormResults" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CustomSearch" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CustomSearchResultItem" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CustomSearchResultsList" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_InstrumentPictures" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_Poster" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_PosterChangedEvt" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>

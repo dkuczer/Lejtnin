@@ -1,0 +1,23 @@
+/*.THIS .tile {*/
+/*    background-color: blue;*/
+/*}*/
+
+.THIS.tile {
+    background-color: white;
+    cursor: pointer;
+    width: 250px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.THIS .product-name{
+
+    /*width: 230px;*/
+
+}
+
+/*.THIS .price {*/
+/*    font*/
+/*}*/

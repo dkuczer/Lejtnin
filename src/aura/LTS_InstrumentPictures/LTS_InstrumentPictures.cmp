@@ -1,0 +1,23 @@
+<aura:component description="LTS_InstrumentPictures" implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="LTS_ProductImageController">
+    <aura:attribute type="String" name="recordId"/>
+    <aura:attribute name="showPictures" type="Boolean"/>
+    <aura:attribute type="List" name="contentDistributionImages"/>
+
+    <lightning:layout >
+        <aura:if isTrue="{!!v.showPictures}">
+            <lightning:button label="Choose poster" onclick="{!c.showPictures}"/>
+        </aura:if>
+        <aura:if isTrue="{!v.showPictures}">
+            <div class="slds-grid resultsContainer">
+                <div class="slds-col slds-size--1-of-1">
+                    <lightning:layout class="slds-scrollable">
+                        <aura:iteration items="{!v.contentDistributionImages}" indexVar="index" var="image">
+                            <img id="{!index}" class="tile" alt="IMG" src="{!image.ContentDownloadUrl}" onclick="{!c.makePoster}"/>
+                        </aura:iteration>
+                    </lightning:layout>
+                    <lightning:button label="Cancel" onclick="{!c.hidePictures}"/>
+                </div>
+            </div>
+        </aura:if>
+    </lightning:layout>
+</aura:component>

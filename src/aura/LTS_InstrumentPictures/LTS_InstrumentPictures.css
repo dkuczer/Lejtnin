@@ -1,0 +1,6 @@
+.THIS .tile{
+    height: 160px;
+    width: 160px;
+    margin: 15px 15px 15px 0px;
+    cursor: pointer;
+}

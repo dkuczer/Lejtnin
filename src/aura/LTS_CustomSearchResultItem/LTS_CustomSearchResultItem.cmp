@@ -1,0 +1,34 @@
+
+<aura:component implements="force:hasRecordId" access="global" description="LTS_CustomSearchResultItem" controller="LTS_ProductImageController">
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="simpleRecord" type="Product2"/>
+    <aura:attribute name="recordError" type="String"/>
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      layoutType="COMPACT"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.simpleRecord}"
+                      targetError="{!v.recordError}"  />
+
+
+    <div class="slds-page-header tile" role="banner" onclick="{!c.handleItemClick}">
+        <div class="slds-grid resultsContainer">
+            <div class="slds-col slds-size--1-of-1">
+                    <c:LTS_Poster recordId="{!v.recordId}" isMiniature="true"/>
+                    <div>
+                        <p class="slds-text-heading--label product-name">{!v.simpleRecord.Name}</p>
+                        <p class="slds-text-heading_small price">50$</p>
+<!--                        <h1 class="slds-page-header__title slds-m-right&#45;&#45;small  slds-truncate slds-align-left"><a href="{! $Site.siteUrlPrefix + '/detail/' + v.simpleRecord.Id}">Go to details</a></h1>-->
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                    {!v.recordError}
+            </ui:message>
+        </div>
+    </aura:if>
+</aura:component>

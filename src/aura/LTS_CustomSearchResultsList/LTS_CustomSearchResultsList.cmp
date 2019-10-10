@@ -1,0 +1,14 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" description="LTS_CustomSearchResultsList">
+    <aura:attribute type="list" name="recordIds" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+
+        <div class="slds-grid slds-wrap resultsContainer">
+            <aura:iteration items="{!v.recordIds}" var="id">
+                <div class="slds-col slds-size--1-of-4">
+                    <c:LTS_CustomSearchResultItem recordId="{!id}"/>
+                </div>
+            </aura:iteration>
+        </div>
+
+</aura:component>

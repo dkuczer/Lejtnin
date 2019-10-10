@@ -1,0 +1,15 @@
+<aura:component description="LTS_Poster" implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="LTS_ProductImageController">
+    <aura:attribute type="String" name="recordId"/>
+    <aura:attribute type="String" name="posterURL"/>
+    <aura:attribute type="Boolean" name="isMiniature"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:LTS_PosterChangedEvt" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!!v.isMiniature}">
+        <img alt="POSTER" src="{!v.posterURL}" style="height: 300px; width: auto"/>
+    </aura:if>
+    <aura:if isTrue="{!v.isMiniature}">
+        <img alt="POSTER" src="{!v.posterURL}" style="height: 230px; width: 230px;"/>
+    </aura:if>
+
+</aura:component>
