@@ -1,0 +1,12 @@
+.THIS .mini-tile{
+    height: 75px;
+    width: 75px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.THIS .main-image{
+    height: 400px;
+    width: 400px;
+}
+

@@ -1,0 +1,19 @@
+<aura:component description="LTS_ImagesSlideshow" controller="LTS_ProductImageController">
+    <aura:attribute type="String" name="productId"/>
+    <aura:attribute type="String" name="mainImage"/>
+    <aura:attribute type="List" name="imageDistributions"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="slds-grid resultsContainer">
+        <div class="slds-col slds-size--1-of-1">
+            <img class="main-image" src="{!v.mainImage}" alt="IMAGE"/>
+            <lightning:layout class="slds-m-top--medium">
+                <aura:iteration items="{!v.imageDistributions}" indexVar="index" var="image">
+                    <img id="{!index}" class="mini-tile" alt="MINI-IMG" src="{!image.ContentDownloadUrl}" onclick="{!c.changeMain}"/>
+                </aura:iteration>
+            </lightning:layout>
+
+        </div>
+    </div>
+
+</aura:component>
