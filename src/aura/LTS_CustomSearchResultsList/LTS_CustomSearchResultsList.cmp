@@ -1,14 +1,25 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" description="LTS_CustomSearchResultsList">
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" description="LTS_CustomSearchResultsList" controller="LTS_CustomSearchController">
     <aura:attribute type="list" name="recordIds" />
+    <aura:attribute type="list" name="productFamilies" />
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
 
-
-        <div class="slds-grid slds-wrap resultsContainer">
-            <aura:iteration items="{!v.recordIds}" var="id">
-                <div class="slds-col slds-size--1-of-4">
-                    <c:LTS_CustomSearchResultItem recordId="{!id}"/>
+        <lightning:layout >
+            <div class="slds-grid slds-m-top--medium slds-m-right--medium categories">
+                <div class="slds-col slds-size--1-of-1">
+                    <p class="slds-m-bottom--medium slds-text-heading_medium">{!$Label.c.LTS_Categories}</p>
+                    <aura:iteration items="{!v.productFamilies}" var="prodFamily" indexVar="index">
+                        <p id="{!index}" class="category slds-text-heading_small slds-m-bottom--small" onclick="{!c.searchByFamily}">{!prodFamily}</p>
+                    </aura:iteration>
                 </div>
-            </aura:iteration>
-        </div>
+            </div>
+            <div class="slds-grid slds-wrap resultsContainer">
+                <aura:iteration items="{!v.recordIds}" var="id">
+                    <div class="slds-col slds-size--1-of-4">
+                        <c:LTS_CustomSearchResultItem recordId="{!id}"/>
+                    </div>
+                </aura:iteration>
+            </div>
+        </lightning:layout>
+
 
 </aura:component>

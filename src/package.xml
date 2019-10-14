@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>LTS_CustomSearchController</members>
+        <members>LTS_generateDocumentDistribution</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>LTS_CustomSearch</members>
+        <members>LTS_CustomSearchResultItem</members>
+        <members>LTS_CustomSearchResultsList</members>
+        <members>LTS_InstrumentPictures</members>
+        <members>LTS_Poster</members>
+        <members>LTS_PosterChangedEvt</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
     <version>46.0</version>
 </Package>

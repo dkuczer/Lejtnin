@@ -1,0 +1,16 @@
+.THIS .resultsContainer{
+    width: 100%;
+}
+
+.THIS .categories{
+    white-space: nowrap;
+}
+
+.THIS .category{
+    cursor: pointer;
+}
+
+.THIS .category:hover{
+    color: white;
+    background-color: rgb(195, 38, 38);
+}
