@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ({
     handleShowPictures: function(component){
         component.set('v.showPictures', true);
@@ -36,3 +37,9 @@
 
     }
 })
+=======
+/**
+ * Created by BRITENET on 16.10.2019.
+ */
+({})
+>>>>>>> Lejtnin/feature/5-searchForProducts

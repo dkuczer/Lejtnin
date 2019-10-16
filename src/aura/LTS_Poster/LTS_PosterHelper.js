@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ({
     handleInit: function(component){
         var action = component.get('c.getProductPoster');
@@ -16,3 +17,9 @@
         $A.enqueueAction(action);
     }
 })
+=======
+/**
+ * Created by BRITENET on 16.10.2019.
+ */
+({})
+>>>>>>> Lejtnin/feature/5-searchForProducts
