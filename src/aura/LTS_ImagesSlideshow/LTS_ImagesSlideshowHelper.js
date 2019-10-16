@@ -15,6 +15,14 @@
                 console.log(images);
                 component.set('v.imageDistributions', images);
             }
+            else{
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving product images"
+                });
+                toastEvent.fire();
+            }
         });
         $A.enqueueAction(action);
     },
