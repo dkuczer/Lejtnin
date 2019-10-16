@@ -14,7 +14,12 @@
                 component.set('v.totalPrice', totalPrice);
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving products from the cart"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(action);
@@ -42,7 +47,12 @@
                 addedToCartEvt.fire();
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving changing product quantity"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(changeQuantityAction);

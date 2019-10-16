@@ -6,7 +6,12 @@
                 component.set('v.productsNO', response.getReturnValue());
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving number of products in the cart"
+                });
+                toastEvent.fire();
             }
         });
 

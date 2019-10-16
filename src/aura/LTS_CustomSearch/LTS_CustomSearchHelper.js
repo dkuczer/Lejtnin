@@ -12,6 +12,14 @@
                 navEvt.setParams({url: '/lts-search-results'});
                 navEvt.fire();
             }
+            else{
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving searching for given phrase"
+                });
+                toastEvent.fire();
+            }
         });
         $A.enqueueAction(action);
     }

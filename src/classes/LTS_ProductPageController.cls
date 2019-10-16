@@ -29,9 +29,6 @@ public with sharing class LTS_ProductPageController {
             prodWrapper.standardPrice = pricesWrapper.standardPrice;
             prodWrapper.specialPrice = pricesWrapper.specialPrice;
         }
-
-        System.debug('Standard price: ' + prodWrapper.standardPrice.UnitPrice);
-        System.debug('Special price: ' + prodWrapper.specialPrice.UnitPrice);
         return prodWrapper;
     }
 
