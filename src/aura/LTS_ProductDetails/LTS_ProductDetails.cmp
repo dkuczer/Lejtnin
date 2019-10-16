@@ -1,4 +1,4 @@
-<aura:component description="LTS_ProductDetails" implements="lightning:isUrlAddressable, forceCommunity:availableForAllPageTypes" controller="LTS_ProductPageController">
+<aura:component description="LTS_ProductDetails" implements="lightning:isUrlAddressable,forceCommunity:availableForAllPageTypes" controller="LTS_ProductPageController">
     <aura:attribute type="String" name="productId"/>
     <aura:attribute type="LTS_ProductPageController.ProductDetailsWrapper" name="productDetailsWrapper"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
@@ -24,7 +24,7 @@
                         <aura:if isTrue="{!!v.productDetailsWrapper.specialPrice}">
                             <div class="slds-text-heading--large"><ui:outputCurrency value="{!v.productDetailsWrapper.standardPrice.UnitPrice}"/></div>
                         </aura:if>
-                        <lightning:button class="slds-button slds-m-left--large">
+                        <lightning:button class="slds-button slds-m-left--large" onclick="{!c.handleAddToCart}">
                             <lightning:icon iconName="utility:cart" class="slds-m-top--x-small slds-m-bottom--x-small slds-m-right--small"/> {!$Label.c.LTS_AddToCart}
                         </lightning:button>
                     </lightning:layout>

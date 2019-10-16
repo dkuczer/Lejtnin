@@ -67,10 +67,6 @@
                             <option name="name" value="LTS_SkillsBasedRouting" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="LTS_SoqlUtil" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="LexInputFieldCompCtrl" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -159,6 +155,14 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="viewSurveyResultsComponentController" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_PriceBookUtils" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ProductPageController" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -363,6 +367,14 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="searchDivisionsFormResults" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ImagesSlideshow" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ProductDetails" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>

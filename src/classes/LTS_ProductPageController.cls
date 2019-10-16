@@ -30,9 +30,18 @@ public with sharing class LTS_ProductPageController {
             prodWrapper.specialPrice = pricesWrapper.specialPrice;
         }
 
-
         System.debug('Standard price: ' + prodWrapper.standardPrice.UnitPrice);
         System.debug('Special price: ' + prodWrapper.specialPrice.UnitPrice);
         return prodWrapper;
+    }
+
+    @AuraEnabled
+    public static Integer addToCart(String productId, String productName, String posterUrl, Double unitPrice){
+        return LTS_OrdersHandler.addToCart(productId, productName, posterUrl, unitPrice);
+    }
+
+    @AuraEnabled
+    public static Integer getProductsInCartNumber(){
+        return LTS_OrdersHandler.getProductsInCartNumber();
     }
 }
