@@ -10,9 +10,8 @@
             </div>
         </div>
         <div class="slds-m-top--x-small">
-            <div class="cart slds-m-left--large">
-                <lightning:icon iconName="utility:cart" class="cart-icon"/>
-            </div>
+<!--                <lightning:icon iconName="utility:cart" class="cart-icon"/>-->
+                <c:LTS_CartIcon/>
         </div>
     </lightning:layout>
 

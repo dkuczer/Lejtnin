@@ -3,6 +3,7 @@
     <types>
         <members>LTS_CustomSearchController</members>
         <members>LTS_generateDocumentDistribution</members>
+        <members>LTS_ProductImageController</members>
         <name>ApexClass</name>
     </types>
     <types>

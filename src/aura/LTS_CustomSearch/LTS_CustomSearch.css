@@ -1,16 +1,3 @@
-.THIS .slds-input__icon{
-    /*margin-top: -.8rem;*/
-}
-
 .THIS {
     padding: 0 10px;
-}
-
-.THIS .cart{
-    cursor: pointer;
-    color:white;
-}
-
-.THIS .cart-icon svg{
-    fill: white;
 }

@@ -1,4 +1,3 @@
-
 <aura:component implements="force:hasRecordId" access="global" description="LTS_CustomSearchResultItem" controller="LTS_ProductImageController">
     <aura:attribute name="record" type="Object"/>
     <aura:attribute name="simpleRecord" type="Product2"/>
