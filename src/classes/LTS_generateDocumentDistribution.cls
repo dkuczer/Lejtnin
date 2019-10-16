@@ -20,10 +20,7 @@ public with sharing class LTS_generateDocumentDistribution {
 
         List<ContentVersion> contentVersions = [SELECT Id FROM ContentVersion WHERE ContentDocumentId IN :contentIds AND FileType IN ('PNG', 'JPG', 'JPEG')];
         for (ContentVersion contentVersion : contentVersions) {
-//                if (contentVersion.Type__c == posterType) {
-//                } else {
             contentVersionIds.add(contentVersion.Id);
-//                }
         }
 
         List<ContentDistribution> contentDistributions = new List<ContentDistribution>();

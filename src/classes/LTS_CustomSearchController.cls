@@ -21,16 +21,13 @@ public with sharing class LTS_CustomSearchController {
         for(Product2 prod: productsWithFamily){
             productIds.add(prod.Id);
         }
-        System.debug(productIds);
         return productIds;
     }
 
     @AuraEnabled
     public static List <String> getProductFamilies() {
         Product2 productObj = new Product2();
-        
-        system.debug('productObj --->' + productObj);
-        system.debug('PRODUCT_FAMILIES --->' + PRODUCT_FAMILIES);
+
         List <String> allOpts = new list <String> ();
         Schema.sObjectType objType = productObj.getSObjectType();
         Schema.DescribeSObjectResult objDescribe = objType.getDescribe();
@@ -39,8 +36,8 @@ public with sharing class LTS_CustomSearchController {
         for (Schema.PicklistEntry a: values) {
             allOpts.add(a.getValue());
         }
-        system.debug('allOpts ---->' + allOpts);
         allOpts.sort();
+
         return allOpts;
     }
 }

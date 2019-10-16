@@ -17,7 +17,6 @@
                     <div>
                         <p class="slds-text-heading--label product-name">{!v.simpleRecord.Name}</p>
                         <p class="slds-text-heading_small price">50$</p>
-<!--                        <h1 class="slds-page-header__title slds-m-right&#45;&#45;small  slds-truncate slds-align-left"><a href="{! $Site.siteUrlPrefix + '/detail/' + v.simpleRecord.Id}">Go to details</a></h1>-->
                     </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 ({
     init: function(component, event, helper) {
-        helper.handleInift(component);
+        helper.handleInit(component);
     },
 
     searchByFamily: function (component, event, helper) {

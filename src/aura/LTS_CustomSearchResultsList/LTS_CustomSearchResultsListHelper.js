@@ -1,5 +1,5 @@
 ({
-    handleInift: function(component){
+    handleInit: function(component){
         var idsJson = sessionStorage.getItem('customSearch--recordIds');
         if (!$A.util.isUndefinedOrNull(idsJson)) {
             var ids = JSON.parse(idsJson);
@@ -13,6 +13,14 @@
             if (state === 'SUCCESS') {
                 var families = response.getReturnValue();
                 component.set('v.productFamilies', families)
+            }
+            else{
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving products families"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(action);
@@ -28,6 +36,14 @@
             if (state === 'SUCCESS') {
                 var ids = response.getReturnValue();
                 component.set('v.recordIds', ids)
+            }
+            else{
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while searching for products"
+                });
+                toastEvent.fire();
             }
         });
 
