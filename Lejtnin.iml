@@ -160,6 +160,22 @@
                           <MetadataEntry>
                             <option name="name" value="viewSurveyResultsComponentController" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ProductPageController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_OrdersHandler" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CustomSettingsUtils" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CartController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -191,6 +207,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="viewSurveyResultsComponent" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_Cart" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -363,6 +383,18 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="searchDivisionsFormResults" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_Cart" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CartIcon" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_AddedToCartEvt" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>

@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="LTS_AddedToCartEvt">
+    <aura:attribute type="Integer" name="productsInCart"/>
+</aura:event>

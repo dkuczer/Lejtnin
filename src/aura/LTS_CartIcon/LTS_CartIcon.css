@@ -1,0 +1,24 @@
+.THIS .cart-icon svg{
+    fill: white;
+}
+.THIS .cart-icon{
+    cursor: pointer;
+    color:white;
+    position: relative;
+}
+.THIS .clicker{
+    cursor:pointer;
+}
+.THIS .productCount{
+    /*visibility:hidden;*/
+    position:absolute;
+    margin-left: 20px;
+    bottom: 70px;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-style: solid;
+    border-color: green;
+    /*opacity: 0.3;*/
+}

@@ -1,0 +1,18 @@
+<aura:component implements="forceCommunity:searchInterface" description="LTS_CustomSearch" controller="LTS_CustomSearchController">
+    <aura:attribute name="searchText" type="String" default=""/>
+    <lightning:layout >
+        <div class="slds-form-element slds-lookup slds-m-top--x-small" data-select="single">
+            <div class="slds-form-element__control">
+                <div class="slds-input-has-icon slds-input-has-icon--right" onkeypress="{!c.keyCheck}">
+                    <lightning:buttonIcon iconName="utility:search" variant="bare" onclick="{! c.handleClick }" alternativeText="Search" class="slds-input__icon" />
+                    <ui:inputText value="{!v.searchText}" class="slds-lookup__search-input slds-input" updateOn="change" placeholder="Search"/>
+                </div>
+            </div>
+        </div>
+        <div class="slds-m-top--x-small">
+<!--                <lightning:icon iconName="utility:cart" class="cart-icon"/>-->
+                <c:LTS_CartIcon/>
+        </div>
+    </lightning:layout>
+
+</aura:component>

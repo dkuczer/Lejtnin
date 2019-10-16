@@ -1,0 +1,14 @@
+<aura:component description="LTS_CartIcon" controller="LTS_ProductPageController">
+    <aura:attribute type="Integer" name="productsNO" default="0"/>
+    <aura:handler event="c:LTS_AddedToCartEvt" action="{!c.countProductsInOrder}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="cart slds-m-left--large clicker" onclick="{!c.goToCart}">
+        <aura:if isTrue="{!v.productsNO == 0}">
+            <lightning:icon iconName="utility:cart" class="clicker"/>
+        </aura:if>
+        <aura:if isTrue="{!v.productsNO > 0}">
+            <lightning:icon iconName="utility:cart" class="cart-icon clicker"/>
+            <p class="productCount">{!v.productsNO}</p>
+        </aura:if>
+    </div>
+</aura:component>
