@@ -28,14 +28,9 @@ public with sharing class LTS_OrdersHandler {
             orderProducts.put(productId, temp);
         }
         sessionPart.put(CACHE_ORDER_PRODUCTS, orderProducts);
-//        sessionPart.remove(CACHE_ORDER_PRODUCTS);
 
         return countProducts(orderProducts);
 
-        //AccountId
-        //EffectiveDate
-        //Status
-        //ContractId
     }
 
     @AuraEnabled

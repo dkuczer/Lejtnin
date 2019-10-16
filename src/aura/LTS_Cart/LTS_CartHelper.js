@@ -7,11 +7,9 @@
                 var products = response.getReturnValue();
                 var totalPrice = 0;
 
-                console.log(products.length);
                 for(var i = 0; i < products.length; i++){
                     totalPrice += (products[i].productPrice * products[i].quantity);
                 }
-
                 component.set('v.products', products);
                 component.set('v.totalPrice', totalPrice);
             }
@@ -25,12 +23,6 @@
         var products = component.get('v.products');
         var productIndex = event.getSource().get('v.name');
         var quantity = event.getParam('value');
-
-
-        // console.log('productIndex: ' + productIndex);
-        // console.log('quantity: ' + quantity);
-        // console.log('product id : ' + products[productIndex].productId);
-        console.log('quantity: ', quantity);
 
         var changeQuantityAction = component.get('c.changeProductQuantity');
         changeQuantityAction.setParams({
@@ -47,14 +39,12 @@
                 addedToCartEvt.setParams({
                     productsInCart: productsInCartNumber
                 });
-                console.log(productsInCartNumber);
                 addedToCartEvt.fire();
             }
             else{
                 console.log('Hey, at least js is working');
             }
         });
-        console.log('jestem tu 3');
         $A.enqueueAction(changeQuantityAction);
 
     },
