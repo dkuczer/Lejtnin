@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ({
     handleInit: function(component){
         var action = component.get('c.getProductPoster');
@@ -13,13 +13,15 @@
                 console.log('PosterCMP poster url: ' + posterURL);
                 component.set('v.posterURL', posterURL);
             }
+            else{
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving poster"
+                });
+                toastEvent.fire();
+            }
         });
         $A.enqueueAction(action);
     }
 })
-=======
-/**
- * Created by BRITENET on 16.10.2019.
- */
-({})
->>>>>>> Lejtnin/feature/5-searchForProducts

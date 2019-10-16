@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ({
     handleInit: function(component){
         var idsJson = sessionStorage.getItem('customSearch--recordIds');
@@ -51,9 +50,3 @@
         $A.enqueueAction(action);
     }
 })
-=======
-/**
- * Created by BRITENET on 16.10.2019.
- */
-({})
->>>>>>> Lejtnin/feature/5-searchForProducts

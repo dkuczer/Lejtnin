@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ({
     handleShowPictures: function(component){
         component.set('v.showPictures', true);
@@ -11,6 +10,15 @@
                 console.log(images);
                 component.set('v.contentDistributionImages', images);
             }
+            else{
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving product pictures"
+                });
+                toastEvent.fire();
+            }
+
         });
         $A.enqueueAction(action);
     },
@@ -32,14 +40,16 @@
                 var posterChangedEvt =  $A.get("e.c:LTS_PosterChangedEvt");
                 posterChangedEvt.fire();
             }
+            else{
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while saving product poster"
+                });
+                toastEvent.fire();
+            }
         });
         $A.enqueueAction(action);
 
     }
 })
-=======
-/**
- * Created by BRITENET on 16.10.2019.
- */
-({})
->>>>>>> Lejtnin/feature/5-searchForProducts
