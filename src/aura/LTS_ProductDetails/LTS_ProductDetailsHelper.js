@@ -23,14 +23,11 @@
     addToCart: function (component) {
         var productDetailsWrapper = component.get('v.productDetailsWrapper');
         var price;
-
         if(productDetailsWrapper.specialPrice){
             price = productDetailsWrapper.specialPrice.UnitPrice;
-            console.log('special price: ' + price);
         }
         else{
             price = productDetailsWrapper.standardPrice.UnitPrice;
-            console.log('standard price: ' + price);
         }
 
         var action = component.get('c.addToCart');

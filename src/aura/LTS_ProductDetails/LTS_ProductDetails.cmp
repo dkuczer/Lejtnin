@@ -5,7 +5,6 @@
     <lightning:layout class="slds-m-top--medium container">
         <lightning:layout >
             <c:LTS_ImagesSlideshow mainImage="{!v.productDetailsWrapper.productRecord.PosterUrl__c}" productId="{!v.productId}"/>
-<!--            <img src="{!v.productDetailsWrapper.productRecord.PosterUrl__c}" alt="POSTER" class="poster"/>-->
         </lightning:layout>
         <lightning:layout class="margin-left-large details">
             <div class="slds-grid resultsContainer">
