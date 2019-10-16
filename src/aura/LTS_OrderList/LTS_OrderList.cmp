@@ -1,0 +1,5 @@
+<aura:component description="LTS_OrderList">
+    <aura:attribute type="List" name="ordersList"/>
+
+
+</aura:component>

@@ -1,0 +1,51 @@
+<aura:component description="LTS_Cart" implements="forceCommunity:availableForAllPageTypes" access="global" controller="LTS_CartController">
+    <aura:attribute type="List" name="products"/>
+    <aura:attribute type="Double" name="totalPrice"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:layout class="slds-m-top--medium">
+        <lightning:icon iconName="utility:cart" size="large" class="slds-m-left--medium slds-m-bottom--large slds-m-top--large"/>
+    </lightning:layout>
+
+
+    <ul class="slds-has-dividers_bottom-space">
+        <aura:iteration items="{!v.products}" var="prod" indexVar="index">
+            <li class="slds-item">
+                <lightning:layout verticalAlign="center" horizontalAlign="spread">
+                    <lightning:layout >
+                        <img src="{!prod.posterUrl}" alt="Product Image" class="product-poster slds-m-right--medium"/>
+                        <div>
+                            <a href="{!$Label.c.LTS_ProductPageLink + prod.productId}" class="slds-text-heading_medium">{!prod.productName}</a>
+                            <p class="slds-text-heading_small slds-m-top--small"><ui:outputCurrency value="{!prod.productPrice}"/></p>
+                        </div>
+                    </lightning:layout>
+                    <div class="show-button-div">
+                        <lightning:layout verticalAlign="start" class="quantity-div">
+                            <p class="slds-text-heading_medium quantity-label">{!$Label.c.LTS_Quantity}</p>
+                                <lightning:input value="{!prod.quantity}" min="1" label="" variant="label-hidden" type="number"
+                                                 class="quantity-input slds-m-bottom--xx-large slds-m-left--medium" name="{!index}" onchange="{!c.recalculate}"/>
+                                <div class="dupa" id="{!index}" onclick="{!c.removeProduct}">
+                                    <lightning:icon iconName="utility:close" size="x-small"
+                                                                               class="slds-m-top--x-small slds-m-bottom--x-small slds-m-left--small closeButton"/>
+                                </div>
+                        </lightning:layout>
+                        <lightning:layout verticalAlign="start" horizontalAlign="end">
+                            <p class="slds-text-heading_small"><ui:outputCurrency value="{!prod.quantity * prod.productPrice}"/></p>
+                        </lightning:layout>
+                    </div>
+                </lightning:layout>
+            </li>
+        </aura:iteration>
+    </ul>
+    <lightning:layout verticalAlign="center" horizontalAlign="end" class="slds-m-bottom--medium">
+        <div>
+            <lightning:layout horizontalAlign="end">
+                <p class="slds-text-heading_small slds-m-top--medium slds-m-bottom--x-small slds-m-right--x-small">{!$Label.c.LTS_Total + ' '}<ui:outputCurrency value="{!v.totalPrice}"/></p>
+            </lightning:layout>
+            <lightning:button class="slds-button slds-m-left--large slds-m-top--x-small slds-m-right--x-small" onclick="{!c.createOrder}">
+                {!$Label.c.LTS_ButtonCheckout} <lightning:icon iconName="utility:forward" size="x-small" class="slds-m-top--x-small slds-m-bottom--x-small slds-m-left--small"/>
+            </lightning:button>
+        </div>
+    </lightning:layout>
+
+</aura:component>
