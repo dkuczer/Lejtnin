@@ -1,5 +1,32 @@
-<aura:component description="LTS_OrderList">
+<aura:component description="LTS_OrderList" controller="LTS_OrderListPageController" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:attribute type="List" name="ordersList"/>
 
-
+    <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-m-top--large">
+        <thead>
+                <th class="" scope="col">
+                    <div class="slds-truncate"> {!$Label.c.LTS_OrderNumber}</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate"> {!$Label.c.LTS_OrderDate}</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate"> {!$Label.c.LTS_TotalPrice}</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate"> {!$Label.c.LTS_OrderStatus}</div>
+                </th>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.ordersList}" var="order" indexVar="index">
+                <tr class="slds-hint-parent">
+                    <td><p>{!order.OrderNumber}</p></td>
+                    <td><p>{!order.EffectiveDate}</p></td>
+                    <td><ui:outputCurrency value="{!order.TotalAmount}"/></td>
+                    <td><p>{!order.Status}</p></td>
+                    <td><lightning:button onclick="{!c.goToDetails}" name="{!index}">Details</lightning:button></td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
 </aura:component>

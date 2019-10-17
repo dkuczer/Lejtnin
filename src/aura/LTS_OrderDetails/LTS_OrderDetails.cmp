@@ -1,0 +1,49 @@
+<aura:component description="LTS_OrderDetails" controller="LTS_OrderDetailsController" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute type="String" name="orderId"/>
+    <aura:attribute type="Double" name="totalPrice"/>
+    <aura:attribute type="List" name="orderProducts"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!!empty(v.orderProducts)}">
+        <lightning:layout horizontalAlign="spread">
+            <h1 class="slds-text-heading_large slds-m-top--large slds-m-bottom--large">{!$Label.c.LTS_OrderNumber}{! ': ' + v.orderProducts[0].Order.OrderNumber}</h1>
+            <h1 class="slds-text-heading_large slds-m-top--large slds-m-bottom--large">{!$Label.c.LTS_Status}{! ': ' + v.orderProducts[0].Order.Status}</h1>
+        </lightning:layout>
+
+        <ul class="slds-has-dividers_bottom-space">
+            <aura:iteration items="{!v.orderProducts}" var="orderProduct">
+                <li class="slds-item">
+                    <lightning:layout verticalAlign="center" horizontalAlign="spread">
+                        <lightning:layout >
+                            <img src="{!orderProduct.Product2.PosterUrl__c}" alt="Product Image" class="product-poster slds-m-right--medium"/>
+                            <div>
+                                <a href="{!$Label.c.LTS_ProductPageLink + orderProduct.Product2.Id}" class="slds-text-heading_medium">{!orderProduct.Product2.Name}</a>
+                                <p class="slds-text-heading_small slds-m-top--small"><ui:outputCurrency value="{!orderProduct.UnitPrice}"/></p>
+                            </div>
+                        </lightning:layout>
+                        <div class="show-button-div">
+                            <lightning:layout verticalAlign="start" class="quantity-div">
+                                <p class="slds-text-heading_medium quantity-label">{!$Label.c.LTS_Quantity} {!' ' + orderProduct.Quantity}</p>
+                            </lightning:layout>
+                            <lightning:layout verticalAlign="start" horizontalAlign="end">
+                                <p class="slds-text-heading_small"><ui:outputCurrency value="{!orderProduct.Quantity * orderProduct.UnitPrice}"/></p>
+                            </lightning:layout>
+                        </div>
+                    </lightning:layout>
+                </li>
+            </aura:iteration>
+        </ul>
+        <lightning:layout verticalAlign="center" horizontalAlign="end" class="slds-m-bottom--medium">
+            <lightning:layout horizontalAlign="end">
+                <p class="slds-text-heading_small slds-m-top--medium slds-m-bottom--x-small slds-m-right--x-small">{!$Label.c.LTS_Total + ' '}<ui:outputCurrency value="{!v.totalPrice}"/></p>
+            </lightning:layout>
+        </lightning:layout>
+    </aura:if>
+    <aura:if isTrue="{!empty(v.orderProducts)}">
+        <lightning:layout horizontalAlign="center">
+            <h1 class="slds-text-heading_large slds-m-top--large slds-m-bottom--large noOrderMessage">{!$Label.c.LTS_NoOrderCommunicate}</h1>
+        </lightning:layout>
+    </aura:if>
+
+
+</aura:component>

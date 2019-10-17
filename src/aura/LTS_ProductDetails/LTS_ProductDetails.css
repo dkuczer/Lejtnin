@@ -1,0 +1,23 @@
+.THIS .poster{
+    height: 400px;
+    width: 400px;
+}
+
+.THIS .margin-left-large{
+    margin-left: 9rem;
+}
+
+.THIS .details{
+    max-width: 40rem;
+}
+
+.THIS .oldPrice{
+    text-decoration: line-through;
+    color: dimgrey;
+    font-size: 14px;
+}
+
+.THIS .newPrice{
+    color: green;
+    font-weight: bold;
+}

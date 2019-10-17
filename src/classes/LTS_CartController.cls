@@ -11,6 +11,10 @@ public with sharing class LTS_CartController {
         return LTS_OrdersHandler.changeProductQuantity(productId, quantity);
     }
     @AuraEnabled
+    public static List<LTS_OrdersHandler.ProductWrapper> removeProductFromCart(String productId){
+        return LTS_OrdersHandler.removeProductFromCart(productId);
+    }
+    @AuraEnabled
     public static void createOrderFromCart(){
         LTS_OrdersHandler.createOrderFromCart();
     }

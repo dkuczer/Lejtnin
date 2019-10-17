@@ -32,12 +32,12 @@
         // console.log('product id : ' + products[productIndex].productId);
         console.log('quantity: ', quantity);
 
-        var changeQuantityAction = component.get('c.changeProductQuantity');
-        changeQuantityAction.setParams({
+        var removeProductAction = component.get('c.changeProductQuantity');
+        removeProductAction.setParams({
             productId: products[productIndex].productId,
             quantity: quantity
         });
-        changeQuantityAction.setCallback(this, function(response){
+        removeProductAction.setCallback(this, function(response){
             if(response.getState() === 'SUCCESS'){
                 var addedToCartEvt =  $A.get("e.c:LTS_AddedToCartEvt");
                 var productsInCartNumber = 0;
@@ -54,7 +54,7 @@
                 console.log('Hey, at least js is working');
             }
         });
-        $A.enqueueAction(changeQuantityAction);
+        $A.enqueueAction(removeProductAction);
 
     },
     calculateTotal: function(component){
@@ -72,16 +72,45 @@
         var products = component.get('v.products');
         var resultIndex = event.target.id;
 
-        console.log(products.length);
-        products.splice(resultIndex, 1);
-        console.log(products.length);
-        component.set('v.products', products);
+        var removeProductAction = component.get('c.removeProductFromCart');
+        removeProductAction.setParams({
+            productId: products[resultIndex].productId,
+        });
+        removeProductAction.setCallback(this, function(response){
+            if(response.getState() === 'SUCCESS'){
+                products.splice(resultIndex, 1);
+                component.set('v.products', products);
+                var productsInCartNumber = 0;
+                var addedToCartEvt =  $A.get("e.c:LTS_AddedToCartEvt");
+                for(var i = 0; i < products.length; i++){
+                    productsInCartNumber = (parseInt(productsInCartNumber) + parseInt(products[i].quantity));
+                }
+                addedToCartEvt.setParams({
+                    productsInCart: productsInCartNumber
+                });
+                addedToCartEvt.fire();
+            }
+            else{
+                console.log('Hey, at least js is working');
+            }
+        });
+        $A.enqueueAction(removeProductAction);
+        
+
     },
     handleCreateOrder: function(component){
         var createOrderAction = component.get('c.createOrderFromCart');
         createOrderAction.setCallback(this, function(response){
             if(response.getState() === 'SUCCESS'){
-                console.log('all good and well');
+                var addedToCartEvt =  $A.get("e.c:LTS_AddedToCartEvt");
+                addedToCartEvt.setParams({
+                    productsInCart: 0
+                });
+                addedToCartEvt.fire();
+
+                var navEvt = $A.get('e.force:navigateToURL');
+                navEvt.setParams({url: '/lts-orders'});
+                navEvt.fire();
             }
             else{
                 console.log('Hey, at least js is working');
