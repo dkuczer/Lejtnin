@@ -51,7 +51,12 @@
                 addedToCartEvt.fire();
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving product details"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(action);

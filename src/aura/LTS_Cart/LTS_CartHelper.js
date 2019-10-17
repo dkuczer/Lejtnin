@@ -16,7 +16,12 @@
                 component.set('v.totalPrice', totalPrice);
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving products from the cart"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(action);
@@ -25,12 +30,6 @@
         var products = component.get('v.products');
         var productIndex = event.getSource().get('v.name');
         var quantity = event.getParam('value');
-
-
-        // console.log('productIndex: ' + productIndex);
-        // console.log('quantity: ' + quantity);
-        // console.log('product id : ' + products[productIndex].productId);
-        console.log('quantity: ', quantity);
 
         var removeProductAction = component.get('c.changeProductQuantity');
         removeProductAction.setParams({
@@ -51,7 +50,12 @@
                 addedToCartEvt.fire();
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while changing product quantity"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(removeProductAction);
@@ -91,7 +95,12 @@
                 addedToCartEvt.fire();
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while removing products from the cart"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(removeProductAction);
@@ -113,7 +122,12 @@
                 navEvt.fire();
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while finalizing Your order"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(createOrderAction);

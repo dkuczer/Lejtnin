@@ -21,7 +21,6 @@
         <members>LTS_DivisionDetailsView</members>
         <members>LTS_ProductDetails</members>
         <members>LTS_OrderList</members>
-        <members>LTS_testComponent</members>
         <members>LTS_OrderDetails</members>
         <name>AuraDefinitionBundle</name>
     </types>

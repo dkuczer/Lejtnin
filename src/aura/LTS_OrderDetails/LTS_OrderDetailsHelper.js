@@ -17,17 +17,20 @@
                     for(var i = 0; i < orderProducts.length; i++){
                         totalPrice += (orderProducts[i].UnitPrice * orderProducts[i].Quantity);
                     }
-
                     component.set('v.orderProducts', orderProducts);
                     component.set('v.totalPrice', totalPrice);
                 }
                 else{
                     component.set('v.orderProducts', null);
                 }
-
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving details of your order"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(action);

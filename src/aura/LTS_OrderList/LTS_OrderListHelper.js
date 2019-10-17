@@ -8,7 +8,12 @@
                 component.set('v.ordersList', orders);
             }
             else{
-                console.log('Hey, at least js is working');
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "Failure",
+                    "message": "An error has occurred while retrieving your orders"
+                });
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(action);
@@ -16,9 +21,6 @@
     goToDetails: function (component, event) {
         var orderIndex = event.getSource().get('v.name');
         var orders = component.get('v.ordersList');
-
-        console.log('Index: ' + orderIndex);
-        console.log('Order Id: ' + orders[orderIndex].Id);
 
         var navEvt = $A.get('e.force:navigateToURL');
         navEvt.setParams({url: '/lts-orderdetails?orderId=' + orders[orderIndex].Id});
