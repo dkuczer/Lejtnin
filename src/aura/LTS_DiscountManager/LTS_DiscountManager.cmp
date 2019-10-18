@@ -1,4 +1,101 @@
-<aura:component description="LTS_DiscountManager" implements="flexipage:availableForAllPageTypes">
-    <aura:attribute type="list" name="availableProducts"/>
-    
+<aura:component description="LTS_DiscountManager" implements="flexipage:availableForAllPageTypes" controller="LTS_DiscountManagerController">
+    <aura:attribute type="List" name="availableProducts"/>
+    <aura:attribute type="List" name="productsFamilies"/>
+    <aura:attribute type="List" name="selectedProducts"/>
+    <aura:attribute type="String" name="productName"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:card>
+        <lightning:layout class="slds-m-left--large">
+            <div class="searchCompContainer">
+                <lightning:layout>
+                    <lightning:layout verticalAlign="end" class="searchContainers">
+                        <lightning:select class="slds-m-right--medium" label="" variant="label-hidden" aura:id="selectFamily">
+                            <option value="">{!$Label.c.LTS_NoneLabel}</option>
+                            <aura:iteration items="{!v.productsFamilies}" var="family">
+                                <option value="{!family}">{!family}</option>
+                            </aura:iteration>
+                        </lightning:select >
+                        <div class="slds-form-element__control ">
+                            <div class="slds-input-has-icon slds-input-has-icon--right">
+                                <lightning:buttonIcon iconName="utility:search" variant="bare" onclick="{! c.getProducts }" alternativeText="Search" class="slds-input__icon" />
+                                <ui:inputText value="{!v.productName}" class="slds-lookup__search-input slds-input" placeholder="{!$Label.c.LTS_SearchProductsNamePlaceholder}" />
+                            </div>
+                        </div>
+                    </lightning:layout>
+                </lightning:layout>
+                <aura:if isTrue="{!!empty(v.availableProducts)}">
+                    <div class="slds-m-top--large">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" >{!$Label.c.LTS_ProductName}</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" >{!$Label.c.LTS_StandardPrice}</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.availableProducts}" var="prodID" indexVar="prodIndex">
+                                    <tr id="prodIndex">
+                                        <th>{!prodID.prodName}</th>
+                                        <th><lightning:formattedNumber value="{!prodID.price}" style="currency" /></th>
+                                        <th id="prodIndex"><lightning:button onclick="{!c.selectProduct}">{!$Label.c.LTS_SelectLabel}</lightning:button></th>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                        <lightning:layout horizontalAlign="end" class="slds-m-top--small slds-m-right--medium">
+                            <lightning:button onclick="{!c.selectProduct}">{!$Label.c.LTS_SelectAll}</lightning:button>
+                        </lightning:layout>
+                    </div>
+                </aura:if>
+            </div>
+            <div>
+                <aura:if isTrue="{!!empty(v.availableProducts)}">
+                    <div class="slds-m-top--large">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" >{!$Label.c.LTS_ProductName}</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" >Standard Price</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" >New Price</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" >Start Date</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" >End Date</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.selectedProducts}" var="prodID" indexVar="prodIndex">
+                                    <tr id="prodIndex">
+                                        <th>{!prodID.prodName}</th>
+                                        <th><lightning:formattedNumber value="{!prodID.price}" style="currency" /></th>
+                                        <th><lightning:input label="" variant="label-hidden"/> </th>
+                                        <th><lightning:input label="" variant="label-hidden"/> </th>
+                                        <th><lightning:input label="" variant="label-hidden"/> </th>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                        <lightning:layout horizontalAlign="end" class="slds-m-top--small slds-m-right--medium">
+                            <lightning:button onclick="{!c.selectProduct}">Create Discount</lightning:button>
+                        </lightning:layout>
+                    </div>
+                </aura:if>
+            </div>
+        </lightning:layout>
+    </lightning:card>
+
+
 </aura:component>

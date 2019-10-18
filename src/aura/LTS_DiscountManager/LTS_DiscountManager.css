@@ -1,0 +1,12 @@
+.THIS .searchContainers{
+    width: 100%;
+}
+
+.THIS .searchCompContainer{
+    /*width: 35vw;*/
+    min-width: 550px;
+}
+
+.THIS .searchRow :hover{
+    background-color: dimgrey;
+}
