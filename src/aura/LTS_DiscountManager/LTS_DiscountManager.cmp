@@ -1,0 +1,4 @@
+<aura:component description="LTS_DiscountManager" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute type="list" name="availableProducts"/>
+    
+</aura:component>

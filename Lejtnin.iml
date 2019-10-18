@@ -160,6 +160,14 @@
                           <MetadataEntry>
                             <option name="name" value="viewSurveyResultsComponentController" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_DiscountManagerController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_PricebookHandler" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -363,6 +371,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="searchDivisionsFormResults" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_DiscountManager" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
