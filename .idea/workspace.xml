@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1a84384-61c1-405c-b65e-9cd0fe8a5838" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManager.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/LTS_ProductsHandler.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/LTS_ProductsHandler.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/LTS_CreateEditDiscount/LTS_CreateEditDiscount.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/LTS_CreateEditDiscount/LTS_CreateEditDiscount.cmp-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/LTS_PricebookDetails/LTS_PricebookDetails.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/LTS_PricebookDetails/LTS_PricebookDetails.cmp-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lejtnin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lejtnin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManager.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManager.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManager.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManager.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManagerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManagerController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManagerHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/LTS_DiscountManager/LTS_DiscountManagerHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/LTS_DiscountManagerController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/LTS_DiscountManagerController.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/LTS_PricebookHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/LTS_PricebookHandler.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/LTS_SoqlUtil.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/LTS_SoqlUtil.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/LTS_SoqlUtil.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/LTS_SoqlUtil.cls-meta.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,12 +24,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Lightning Component" />
         <option value="Lightning Controller" />
         <option value="Lightning Helper" />
         <option value="Apex Class" />
-        <option value="Apex Metadata" />
         <option value="Lightning Style" />
+        <option value="Lightning Component" />
+        <option value="Apex Metadata" />
       </list>
     </option>
   </component>
@@ -54,7 +54,7 @@
         <entry key="Lejtnin">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1571393024771" />
+              <option name="moduleContentsLastModified" value="1571586695106" />
             </ModuleWorkspaceSettings>
           </value>
         </entry>
@@ -65,8 +65,8 @@
         <option name="anonymousApexSettings">
           <AnonymousApexSettings>
             <option name="apexLogLevel" value="FINEST" />
-            <option name="documentText" value="" />
-            <option name="splitterProportion" value="0.5009434" />
+            <option name="documentText" value="//List&lt;Product2&gt; pricebooks = [SELECT Id FROM Pricebook2 WHERE Name LIKE '%Standard%'AND NOT Id  = '01s2o000001BswuAAC'];&#10;&#10;//&#10;&#10;List&lt;Pricebook2&gt; strings = [SELECT Id FROM Pricebook2 WHERE Name LIKE '%Standard%' AND Id != '01s2o000001BswuAAC'];&#10;delete strings;" />
+            <option name="splitterProportion" value="0.82895726" />
           </AnonymousApexSettings>
         </option>
         <option name="connectionWorkspaceSettings">
@@ -77,17 +77,19 @@
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
                       <entry key="AURA/LTS_CART" value="1571317068073" />
-                      <entry key="AURA/LTS_DISCOUNTMANAGER" value="1571404035555" />
+                      <entry key="AURA/LTS_CREATEEDITDISCOUNT" value="1571569312000" />
+                      <entry key="AURA/LTS_DISCOUNTMANAGER" value="1571651310971" />
                       <entry key="AURA/LTS_ORDERDETAILS" value="1571317119447" />
                       <entry key="AURA/LTS_ORDERLIST" value="1571317150237" />
                       <entry key="AURA/LTS_PRODUCTDETAILS" value="1571303296861" />
                       <entry key="CLASSES/LTS_CARTCONTROLLER.CLS" value="1571315783015" />
-                      <entry key="CLASSES/LTS_CUSTOMSETTINGSUTILS.CLS" value="1571219053888" />
-                      <entry key="CLASSES/LTS_DISCOUNTMANAGERCONTROLLER.CLS" value="1571400651329" />
+                      <entry key="CLASSES/LTS_CUSTOMSETTINGSUTILS.CLS" value="1571574878667" />
+                      <entry key="CLASSES/LTS_DISCOUNTMANAGERCONTROLLER.CLS" value="1571651262086" />
                       <entry key="CLASSES/LTS_ORDERDETAILSCONTROLLER.CLS" value="1571312385289" />
                       <entry key="CLASSES/LTS_ORDERLISTPAGECONTROLLER.CLS" value="1571304803000" />
                       <entry key="CLASSES/LTS_ORDERSHANDLER.CLS" value="1571315776632" />
-                      <entry key="CLASSES/LTS_PRICEBOOKHANDLER.CLS" value="1571396973629" />
+                      <entry key="CLASSES/LTS_PRICEBOOKHANDLER.CLS" value="1571652304147" />
+                      <entry key="CLASSES/LTS_PRICEBOOKUTILS.CLS" value="1571587021930" />
                       <entry key="CLASSES/LTS_PRODUCTPAGECONTROLLER.CLS" value="1571303294500" />
                       <entry key="CLASSES/LTS_PRODUCTSHANDLER.CLS" value="1571398394557" />
                     </map>
@@ -110,6 +112,7 @@
                   <option name="lastCustomSelectionUrls">
                     <set>
                       <option value="metadata://ApexClass/LTS_CustomSettingsUtils" />
+                      <option value="metadata://ApexClass/LTS_PriceBookUtils" />
                       <option value="metadata://ApexClass/LTS_SoqlUtil" />
                     </set>
                   </option>
@@ -123,58 +126,23 @@
             <entry key="Lejtnin">
               <value>
                 <MetadataContents>
-                  <option name="lastPopulated" value="1571392396177" />
+                  <option name="lastPopulated" value="1571565429049" />
                   <option name="metadataTypes">
                     <set>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="EmbeddedServiceBranding_Parent04I2o000000CdUL_16d3e83416d" />
-                          </set>
-                        </option>
-                        <option name="name" value="EmbeddedServiceBranding" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="over1MB" />
-                            <option value="New_Looney_Tunes_Logo1" />
-                            <option value="New_Looney_Tunes_Logo" />
-                            <option value="guitar_hands_fingers_116021_3840x24" />
-                          </set>
-                        </option>
-                        <option name="name" value="ContentAsset" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="cbLooney_Tunes_Shop" />
-                          </set>
-                        </option>
-                        <option name="name" value="NetworkBranding" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Chat_Agent" />
-                          </set>
-                        </option>
-                        <option name="name" value="EmbeddedServiceConfig" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
                             <option value="Custom%3A Support Profile" />
                             <option value="Customer Community Plus Login User" />
-                            <option value="Analytics Cloud Integration User" />
                             <option value="High Volume Customer Portal User" />
-                            <option value="Force%2Ecom - Free User" />
+                            <option value="Analytics Cloud Integration User" />
                             <option value="Cross Org Data Proxy User" />
+                            <option value="Force%2Ecom - Free User" />
                             <option value="PlatformPortal" />
                             <option value="External Identity User" />
                             <option value="Force%2Ecom - App Subscription User" />
-                            <option value="Chatter External User" />
                             <option value="Standard" />
+                            <option value="Chatter External User" />
                             <option value="Identity User" />
                             <option value="Custom%3A Sales Profile" />
                             <option value="Partner Community Login User" />
@@ -183,21 +151,21 @@
                             <option value="Looney Tunes Shop Profile" />
                             <option value="Partner Community User" />
                             <option value="StandardAul" />
-                            <option value="Gold Partner User" />
                             <option value="Chatter Moderator User" />
+                            <option value="Gold Partner User" />
                             <option value="ReadOnly" />
                             <option value="SolutionManager" />
                             <option value="Chatter Free User" />
                             <option value="Guest" />
                             <option value="HighVolumePortal" />
-                            <option value="Customer Portal Manager Standard" />
-                            <option value="Customer Community Login User" />
                             <option value="MarketingProfile" />
+                            <option value="Customer Community Login User" />
+                            <option value="Customer Portal Manager Standard" />
                             <option value="Analytics Cloud Security User" />
                             <option value="Admin" />
+                            <option value="Work%2Ecom Only User" />
                             <option value="Partner App Subscription User" />
                             <option value="Silver Partner User" />
-                            <option value="Work%2Ecom Only User" />
                             <option value="Authenticated Website" />
                             <option value="Customer Community User" />
                             <option value="Custom%3A Marketing Profile" />
@@ -246,6 +214,14 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="EmbeddedServiceBranding_Parent04I2o000000CdUL_16d3e83416d" />
+                          </set>
+                        </option>
+                        <option name="name" value="EmbeddedServiceBranding" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="Account" />
                             <option value="Company" />
                             <option value="Address" />
@@ -254,9 +230,9 @@
                             <option value="Product" />
                             <option value="Security" />
                             <option value="Knowledge" />
-                            <option value="Case" />
                             <option value="Name" />
                             <option value="Ideas" />
+                            <option value="Case" />
                             <option value="Territory2" />
                             <option value="FieldService" />
                             <option value="LiveMessage" />
@@ -264,24 +240,24 @@
                             <option value="Opportunity" />
                             <option value="Search" />
                             <option value="FileUploadAndDownloadSecurity" />
-                            <option value="Order" />
                             <option value="Activities" />
+                            <option value="Order" />
                             <option value="OrgPreference" />
                             <option value="GoogleApps" />
                             <option value="Bot" />
                             <option value="BusinessHours" />
                             <option value="UserInterface" />
-                            <option value="Mobile" />
                             <option value="Forecasting" />
+                            <option value="Mobile" />
                             <option value="Analytics" />
-                            <option value="Quote" />
                             <option value="LiveAgent" />
+                            <option value="Quote" />
                             <option value="ExperienceBundle" />
                             <option value="UserManagement" />
                             <option value="Entitlement" />
+                            <option value="Contract" />
                             <option value="PathAssistant" />
                             <option value="Notifications" />
-                            <option value="Contract" />
                           </set>
                         </option>
                         <option name="name" value="Settings" />
@@ -325,6 +301,30 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="Case.Product_Support" />
+                            <option value="Metric.Progress" />
+                            <option value="Account.Division" />
+                            <option value="Metric.Completion" />
+                            <option value="Case.Inquiry" />
+                            <option value="Knowledge__kav.FAQ" />
+                          </set>
+                        </option>
+                        <option name="name" value="RecordType" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Case.Product Support Process" />
+                            <option value="Lead.Lead conerting" />
+                            <option value="Opportunity.Sell instruments" />
+                            <option value="Case.Inquiry Process" />
+                          </set>
+                        </option>
+                        <option name="name" value="BusinessProcess" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="Campaign.ViewCampaignInfluenceReport" />
                             <option value="Opportunity.DeliveryStatus" />
                             <option value="Case.UpsellCrosssellOpportunity" />
@@ -338,19 +338,19 @@
                           <set>
                             <option value="DirectorDirectSales" />
                             <option value="SVPSalesMarketing" />
-                            <option value="COO" />
                             <option value="MarketingTeam" />
+                            <option value="COO" />
                             <option value="DirectorChannelSales" />
                             <option value="InstallationRepairServices" />
                             <option value="SVPHumanResources" />
                             <option value="SVPCustomerServiceSupport" />
                             <option value="VPInternationalSales" />
-                            <option value="CEO" />
-                            <option value="Customer_Manager" />
                             <option value="EasternSalesTeam" />
+                            <option value="CEO" />
                             <option value="ChannelSalesTeam" />
-                            <option value="CFO" />
+                            <option value="Customer_Manager" />
                             <option value="CustomerSupportInternational" />
+                            <option value="CFO" />
                             <option value="WesternSalesTeam" />
                             <option value="CustomerSupportNorthAmerica" />
                             <option value="VPMarketing" />
@@ -358,6 +358,14 @@
                           </set>
                         </option>
                         <option name="name" value="Role" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Convert_lead_path" />
+                          </set>
+                        </option>
+                        <option name="name" value="PathAssistant" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -370,10 +378,21 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Convert_lead_path" />
+                            <option value="over1MB" />
+                            <option value="New_Looney_Tunes_Logo1" />
+                            <option value="New_Looney_Tunes_Logo" />
+                            <option value="guitar_hands_fingers_116021_3840x24" />
                           </set>
                         </option>
-                        <option name="name" value="PathAssistant" />
+                        <option name="name" value="ContentAsset" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="cbLooney_Tunes_Shop" />
+                          </set>
+                        </option>
+                        <option name="name" value="NetworkBranding" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -493,16 +512,16 @@
                             <option value="Solution" />
                             <option value="Order" />
                             <option value="SurveyQuestionResponse__c" />
-                            <option value="SurveyTaker__c" />
                             <option value="PartnerFundRequest" />
+                            <option value="SurveyTaker__c" />
                             <option value="Contact" />
-                            <option value="ContentDocument" />
                             <option value="ChannelProgramLevel" />
+                            <option value="ContentDocument" />
                             <option value="Campaign" />
                             <option value="ServiceResourceSkill" />
                             <option value="Event" />
-                            <option value="Survey_Question__c" />
                             <option value="Contract" />
+                            <option value="Survey_Question__c" />
                             <option value="LinkedArticle" />
                           </set>
                         </option>
@@ -528,180 +547,10 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Case_Record_Page" />
-                            <option value="Product_Record_Page" />
-                            <option value="Survey_Taken_Record_Page1" />
-                            <option value="LightningSalesConsole_UtilityBar" />
-                            <option value="Service_Cloud_UtilityBar" />
-                            <option value="Product_Record_Page1" />
-                            <option value="Product_Record_Page2" />
-                            <option value="LightningService_UtilityBar" />
-                            <option value="Looney_Tunes_UtilityBar" />
-                            <option value="Survey_Taken_Record_Page" />
-                            <option value="Service_Resource_Record_Page" />
-                            <option value="LTS_DiscountManager" />
-                            <option value="Divisions" />
-                          </set>
-                        </option>
-                        <option name="name" value="FlexiPage" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Survey_w_Questions_and_Answers" />
-                          </set>
-                        </option>
-                        <option name="name" value="ReportType" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="contactUs_Profile_profileSessionSetting1568367144787" />
-                            <option value="LTS_Community_User_profileSessionSetting1570704425539" />
-                          </set>
-                        </option>
-                        <option name="name" value="ProfileSessionSetting" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Salesforce1" />
-                            <option value="AppSwitcher" />
-                          </set>
-                        </option>
-                        <option name="name" value="AppMenu" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="contactUs_Profile_profilePasswordPolicy1568367144713" />
-                            <option value="LTS_Community_User_profilePasswordPolicy1570704425451" />
-                          </set>
-                        </option>
-                        <option name="name" value="ProfilePasswordPolicy" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Normal_Priority" />
-                            <option value="Chats" />
-                            <option value="Inquiry" />
-                            <option value="Hight_Priority" />
-                          </set>
-                        </option>
-                        <option name="name" value="Queue" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Looney Tunes Shop.Flag_banned" />
-                            <option value="Looney Tunes Shop.Review_the_first_post" />
-                            <option value="Looney Tunes Shop.Freeze_for_frequent_posting" />
-                            <option value="Looney Tunes Shop.Block_banned_keywords" />
-                            <option value="Looney Tunes Shop.Replace_banned" />
-                          </set>
-                        </option>
-                        <option name="name" value="ModerationRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Looney_Tunes_Shop1" />
-                          </set>
-                        </option>
-                        <option name="name" value="SiteDotCom" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Internal Zone" />
-                          </set>
-                        </option>
-                        <option name="name" value="Community" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Google" />
-                          </set>
-                        </option>
-                        <option name="name" value="AuthProvider" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Chat_Setup_Flow_CORS" />
-                          </set>
-                        </option>
-                        <option name="name" value="CorsWhitelistOrigin" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Contact.Standard_Contact_Match_Rule_v1_1" />
-                            <option value="Lead.Standard_Lead_Match_Rule_v1_0" />
-                            <option value="Account.Standard_Account_Match_Rule_v1_0" />
-                          </set>
-                        </option>
-                        <option name="name" value="MatchingRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account" />
-                            <option value="Individual" />
-                            <option value="Lead" />
-                            <option value="Contact" />
-                          </set>
-                        </option>
-                        <option name="name" value="MatchingRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead.Standard" />
-                            <option value="Case.Standard" />
-                            <option value="Case.Standard Case Assignment" />
-                          </set>
-                        </option>
-                        <option name="name" value="AssignmentRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead" />
-                            <option value="Case" />
-                          </set>
-                        </option>
-                        <option name="name" value="AssignmentRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Looney Tunes Shop" />
-                          </set>
-                        </option>
-                        <option name="name" value="ManagedTopics" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Knowledge_LSF_Permission_Set" />
-                            <option value="Live_Agent_Setup_Flow" />
-                            <option value="Omni_Setup_Flow" />
-                          </set>
-                        </option>
-                        <option name="name" value="PermissionSet" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
                             <option value="Chat_Agent" />
-                            <option value="Tier_1_Agents" />
-                            <option value="default_presence_config" />
                           </set>
                         </option>
-                        <option name="name" value="PresenceUserConfig" />
+                        <option name="name" value="EmbeddedServiceConfig" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -711,6 +560,7 @@
                             <option value="LTS_DivisionsSearchEvemt" />
                             <option value="LTS_ImagesSlideshow" />
                             <option value="LTS_CustomToast" />
+                            <option value="LTS_PricebookDetails" />
                             <option value="LTS_ProductDetails" />
                             <option value="spinnerQueueStart" />
                             <option value="forgotPassword" />
@@ -718,15 +568,16 @@
                             <option value="LTS_Cart" />
                             <option value="LTS_OrderList" />
                             <option value="LTS_InstrumentPictures" />
+                            <option value="LTS_CreateEditDiscount" />
                             <option value="setStartUrl" />
                             <option value="LTS_DivisionClickedForDetails" />
                             <option value="setExpId" />
-                            <option value="LTS_DivisionsSearchEvent" />
                             <option value="LTS_PosterChangedEvt" />
+                            <option value="LTS_DivisionsSearchEvent" />
                             <option value="LTS_Poster" />
                             <option value="LTS_CustomSearchResultsList" />
-                            <option value="LTS_DivisionDetailsView" />
                             <option value="LTS_CustomSearch" />
+                            <option value="LTS_DivisionDetailsView" />
                             <option value="LTS_OrderDetails" />
                             <option value="LTS_DivisionListView" />
                             <option value="LTS_AddedToCartEvt" />
@@ -754,6 +605,15 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="Case.High Priority Escalation" />
+                            <option value="Case.Standard" />
+                          </set>
+                        </option>
+                        <option name="name" value="EscalationRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="LTS_OrderRealization" />
                             <option value="Skills_based_routing" />
                             <option value="LTS_LeadMining" />
@@ -772,148 +632,69 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Case.High Priority Escalation" />
-                            <option value="Case.Standard" />
+                            <option value="Case.SLAViolation__c" />
+                            <option value="Lead.Primary__c" />
+                            <option value="SurveyTaker__c.User__c" />
+                            <option value="Survey_Question__c.Survey__c" />
+                            <option value="Lead.CurrentGenerators__c" />
+                            <option value="Account.NumberofLocations__c" />
+                            <option value="Opportunity.MainCompetitors__c" />
+                            <option value="Account.SLASerialNumber__c" />
+                            <option value="Account.UpsellOpportunity__c" />
+                            <option value="Survey__c.Survey_Container_CSS__c" />
+                            <option value="LTS_CS__c.Value__c" />
+                            <option value="Account.CustomerPriority__c" />
+                            <option value="SurveyQuestionResponse__c.Survey_Question__c" />
+                            <option value="Opportunity.OrderNumber__c" />
+                            <option value="Case.EngineeringReqNumber__c" />
+                            <option value="Metric.OrigMetricId__c" />
+                            <option value="Account.SLAExpirationDate__c" />
+                            <option value="Survey__c.URL__c" />
+                            <option value="SurveyTaker__c.Case__c" />
+                            <option value="Case.PotentialLiability__c" />
+                            <option value="Survey_Question__c.Type__c" />
+                            <option value="Survey_Question__c.Total_Responses__c" />
+                            <option value="SurveyTaker__c.Contact__c" />
+                            <option value="Survey__c.thankYouLink__c" />
+                            <option value="Survey_Question__c.Question__c" />
+                            <option value="Product2.Product_Type__c" />
+                            <option value="Survey__c.Submit_Response__c" />
+                            <option value="Survey_Question__c.OrderNumber__c" />
+                            <option value="Opportunity.TrackingNumber__c" />
+                            <option value="Order.User__c" />
+                            <option value="Account.Active__c" />
+                            <option value="CaseComment.ParentOrigin" />
+                            <option value="Opportunity.DeliveryInstallationStatus__c" />
+                            <option value="Contact.Level__c" />
+                            <option value="Knowledge__kav.Answer__c" />
+                            <option value="Product2.PosterUrl__c" />
+                            <option value="Goal.OrigGoalId__c" />
+                            <option value="Account.SLA__c" />
+                            <option value="SurveyTaker__c.Survey__c" />
+                            <option value="Survey_Question__c.Required__c" />
+                            <option value="SurveyQuestionResponse__c.Response__c" />
+                            <option value="Lead.SICCode__c" />
+                            <option value="Contact.Languages__c" />
+                            <option value="Pricebook2.EndDate__c" />
+                            <option value="Survey__c.thankYouText__c" />
+                            <option value="SurveyTaker__c.Taken__c" />
+                            <option value="SurveyQuestionResponse__c.SurveyTaker__c" />
+                            <option value="CaseComment.CommentBody" />
+                            <option value="Survey__c.Hide_Survey_Name__c" />
+                            <option value="Knowledge__kav.Question__c" />
+                            <option value="Survey__c.Thank_You_Text__c" />
+                            <option value="Survey_Question__c.Choices__c" />
+                            <option value="Opportunity.CurrentGenerators__c" />
+                            <option value="Survey__c.Survey_Header__c" />
+                            <option value="SurveyTaker__c.Lead__c" />
+                            <option value="Pricebook2.StartDate__c" />
+                            <option value="SurveyQuestionResponse__c.of_Time_Question_was_Responded_to__c" />
+                            <option value="Lead.ProductInterest__c" />
+                            <option value="Lead.NumberofLocations__c" />
+                            <option value="Case.Product__c" />
                           </set>
                         </option>
-                        <option name="name" value="EscalationRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="ChangePassword" />
-                            <option value="SiteTemplate" />
-                            <option value="InMaintenance" />
-                            <option value="StdExceptionTemplate" />
-                            <option value="SiteRegister" />
-                            <option value="AnswersHome" />
-                            <option value="LTS_ContactUsPage" />
-                            <option value="SurveyPage" />
-                            <option value="SurveyManagerPage" />
-                            <option value="SiteLogin" />
-                            <option value="CommunitiesLanding" />
-                            <option value="Unauthorized" />
-                            <option value="SiteRegisterConfirm" />
-                            <option value="UnderConstruction" />
-                            <option value="Getting_Started_With_Survey_Force" />
-                            <option value="TakeSurvey" />
-                            <option value="FileNotFound" />
-                            <option value="CommunitiesSelfReg" />
-                            <option value="ForgotPassword" />
-                            <option value="Exception" />
-                            <option value="GSurveys" />
-                            <option value="IdeasHome" />
-                            <option value="ForgotPasswordConfirm" />
-                            <option value="BandwidthExceeded" />
-                            <option value="CommunitiesLogin" />
-                            <option value="MyProfilePage" />
-                            <option value="CommunitiesTemplate" />
-                            <option value="CommunitiesSelfRegConfirm" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexPage" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SiteFooter" />
-                            <option value="LTS_Cart" />
-                            <option value="uiMessage" />
-                            <option value="SitePoweredBy" />
-                            <option value="SiteLogin" />
-                            <option value="viewShareSurveyComponent" />
-                            <option value="viewSurveyResultsComponent" />
-                            <option value="LexInputField" />
-                            <option value="SiteHeader" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexComponent" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account-Account %28Sales%29 Layout" />
-                            <option value="Contact-Contact %28Support%29 Layout" />
-                            <option value="Product2-Product Layout" />
-                            <option value="Lead-Lead Layout" />
-                            <option value="ConsumptionRate-Consumption Rate Layout" />
-                            <option value="Contact-Contact Layout" />
-                            <option value="Case-Case %28Sales%29 Layout" />
-                            <option value="CollaborationGroup-Group Layout" />
-                            <option value="Lead-Lead %28Support%29 Layout" />
-                            <option value="ServiceResource-Service Resource Layout" />
-                            <option value="DandBCompany-D%26B Company Layout" />
-                            <option value="AssetRelationship-Asset Relationship Layout" />
-                            <option value="Case-Case %28Support%29 Layout" />
-                            <option value="Case-Inquiry Case Layout" />
-                            <option value="Macro-Macro Layout" />
-                            <option value="Order-Order Layout" />
-                            <option value="Solution-Solution Layout" />
-                            <option value="ScorecardMetric-Scorecard Metric Layout" />
-                            <option value="UserProvisioningRequest-User Provisioning Request Layout" />
-                            <option value="Pricebook2-Price Book Layout" />
-                            <option value="Event-Event Layout" />
-                            <option value="UserProvisioningLog-User Provisioning Log Layout" />
-                            <option value="UserProvAccount-User Provisioning Account Layout" />
-                            <option value="Contact-Contact %28Marketing%29 Layout" />
-                            <option value="Task-Task Layout" />
-                            <option value="ConsumptionSchedule-Consumption Schedule Layout" />
-                            <option value="SurveyQuestionResponse__c-Survey Question Answer Layout" />
-                            <option value="Asset-Asset Layout" />
-                            <option value="Opportunity-Opportunity Layout" />
-                            <option value="DuplicateRecordSet-Duplicate Record Set Layout" />
-                            <option value="OrderItem-Order Product Layout" />
-                            <option value="SurveyTaker__c-SurveyTaker Layout" />
-                            <option value="Quote-Quote Layout" />
-                            <option value="OpportunityLineItem-Opportunity Product Layout" />
-                            <option value="Case-Case Layout" />
-                            <option value="Contract-Contract Layout" />
-                            <option value="Account-Account Layout" />
-                            <option value="Campaign-Campaign Layout" />
-                            <option value="UserAlt-User Profile Layout" />
-                            <option value="LiveChatTranscriptActive-Chat Transcript %28In Progress%29 Layout" />
-                            <option value="LiveChatTranscriptEvent-Chat Transcript Event Layout" />
-                            <option value="CommunityMemberLayout-Community Member Layout" />
-                            <option value="ScorecardAssociation-Scorecard Association Layout" />
-                            <option value="LiveChatTranscript-Chat Transcript Layout" />
-                            <option value="Opportunity-Opportunity %28Sales%29 Layout" />
-                            <option value="Survey__c-Survey Layout" />
-                            <option value="Survey_Question__c-Survey Question Layout" />
-                            <option value="SocialPersona-Social Persona Layout" />
-                            <option value="Scorecard-Scorecard Layout" />
-                            <option value="Case-Case %28Marketing%29 Layout" />
-                            <option value="Case-Product Support Case Layout" />
-                            <option value="PricebookEntry-Price Book Entry Layout" />
-                            <option value="QuoteLineItem-Quote Line Item Layout" />
-                            <option value="CaseClose-Close Case Layout" />
-                            <option value="LiveChatTranscriptWaiting-Chat Transcript %28Waiting%29 Layout" />
-                            <option value="FeedItem-Feed Item Layout" />
-                            <option value="Idea-Idea Layout" />
-                            <option value="ContentVersion-Content Version Layout" />
-                            <option value="Opportunity-Opportunity %28Support%29 Layout" />
-                            <option value="Global-Global Layout" />
-                            <option value="Lead-Lead %28Sales%29 Layout" />
-                            <option value="Account-Account %28Marketing%29 Layout" />
-                            <option value="EmailMessage-Email Message Layout" />
-                            <option value="SocialPost-Social Post Layout" />
-                            <option value="Individual-Individual Layout" />
-                            <option value="ServiceResourceSkill-Service Resource Skill Layout" />
-                            <option value="ProductConsumptionSchedule-Product Consumption Schedule Layout" />
-                            <option value="Knowledge__kav-Knowledge Layout" />
-                            <option value="CampaignMember-Campaign Member Page Layout" />
-                            <option value="Account-Account %28Support%29 Layout" />
-                            <option value="QuickText-Quick Text Layout" />
-                            <option value="LiveAgentSession-Chat Session Layout" />
-                            <option value="User-User Layout" />
-                            <option value="Contact-Contact %28Sales%29 Layout" />
-                            <option value="Lead-Lead %28Marketing%29 Layout" />
-                            <option value="Knowledge__kav-Lightning Knowledge FAQ Layout" />
-                            <option value="AccountBrand-Account Brand Layout" />
-                            <option value="LiveChatVisitor-Chat Visitor Layout" />
-                            <option value="Opportunity-Opportunity %28Marketing%29 Layout" />
-                          </set>
-                        </option>
-                        <option name="name" value="Layout" />
+                        <option name="name" value="CustomField" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -929,46 +710,46 @@
                             <option value="Document" />
                             <option value="ChannelProgram" />
                             <option value="ContactCleanInfo" />
-                            <option value="ScorecardMetric" />
                             <option value="SkillRequirement" />
+                            <option value="ScorecardMetric" />
                             <option value="PushTopic" />
                             <option value="PartnerFundAllocation" />
                             <option value="Asset" />
-                            <option value="PromptAction" />
                             <option value="ContactPointTypeConsent" />
-                            <option value="OrgMetricScanResult" />
+                            <option value="PromptAction" />
                             <option value="CampaignMember" />
+                            <option value="OrgMetricScanResult" />
                             <option value="CollaborationGroupMember" />
-                            <option value="StreamingChannel" />
                             <option value="SurveyQuestionResponse__c" />
                             <option value="AccountContactRole" />
+                            <option value="StreamingChannel" />
                             <option value="Pricebook2" />
-                            <option value="PricebookEntry" />
-                            <option value="Recommendation" />
                             <option value="PartnerFundRequest" />
+                            <option value="Recommendation" />
+                            <option value="PricebookEntry" />
                             <option value="AgentWorkSkill" />
                             <option value="Idea" />
                             <option value="ServiceResourceSkill" />
                             <option value="ExpressionFilter" />
                             <option value="QuickTextUsage" />
-                            <option value="LinkedArticle" />
-                            <option value="ScorecardAssociation" />
-                            <option value="Contract" />
-                            <option value="ChatterActivity" />
                             <option value="Survey_Question__c" />
+                            <option value="LinkedArticle" />
+                            <option value="ChatterActivity" />
+                            <option value="Contract" />
+                            <option value="ScorecardAssociation" />
                             <option value="RecordMergeHistory" />
                             <option value="Site" />
-                            <option value="AccountBrand" />
-                            <option value="Product2" />
                             <option value="ProductConsumptionSchedule" />
+                            <option value="Product2" />
+                            <option value="AccountBrand" />
                             <option value="Case" />
-                            <option value="NetworkMember" />
-                            <option value="LTS_CS__c" />
                             <option value="AuthorizationFormText" />
+                            <option value="LTS_CS__c" />
+                            <option value="NetworkMember" />
                             <option value="ContentVersion" />
                             <option value="Lead" />
-                            <option value="ServiceResource" />
                             <option value="DuplicateRecordSet" />
+                            <option value="ServiceResource" />
                             <option value="Solution" />
                             <option value="AssetRelationship" />
                             <option value="QuickText" />
@@ -980,8 +761,8 @@
                             <option value="RequestsForAccessSIQ" />
                             <option value="LiveChatTranscriptSkill" />
                             <option value="OrderItem" />
-                            <option value="Event" />
                             <option value="ConsumptionRate" />
+                            <option value="Event" />
                             <option value="PendingServiceRouting" />
                             <option value="ChannelProgramMember" />
                             <option value="CollaborationGroup" />
@@ -1009,30 +790,30 @@
                             <option value="OrgMetricScanSummary" />
                             <option value="LiveAgentSession" />
                             <option value="MacroUsage" />
-                            <option value="OpportunityCompetitor" />
                             <option value="PartnerRole" />
-                            <option value="DataUsePurpose" />
+                            <option value="OpportunityCompetitor" />
                             <option value="MacroAction" />
+                            <option value="DataUsePurpose" />
                             <option value="ContactRequest" />
-                            <option value="User" />
                             <option value="LiveChatTranscriptEvent" />
-                            <option value="PartnerMarketingBudget" />
+                            <option value="User" />
                             <option value="Macro" />
+                            <option value="PartnerMarketingBudget" />
                             <option value="MacroInstruction" />
                             <option value="DuplicateRecordItem" />
                             <option value="ExpressionFilterCriteria" />
                             <option value="CaseComment" />
                             <option value="Opportunity" />
-                            <option value="Topic" />
                             <option value="Scorecard" />
+                            <option value="Topic" />
                             <option value="StreamActivityAccess" />
                             <option value="DandBCompany" />
                             <option value="OpportunityContactRole" />
                             <option value="LiveChatTranscript" />
                             <option value="Contact" />
                             <option value="Quote" />
-                            <option value="MessagingSession" />
                             <option value="AssistantProgress" />
+                            <option value="MessagingSession" />
                             <option value="RecordAction" />
                             <option value="TopicAssignment" />
                           </set>
@@ -1042,74 +823,9 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Case.SLAViolation__c" />
-                            <option value="Lead.Primary__c" />
-                            <option value="SurveyTaker__c.User__c" />
-                            <option value="Survey_Question__c.Survey__c" />
-                            <option value="Lead.CurrentGenerators__c" />
-                            <option value="Account.NumberofLocations__c" />
-                            <option value="Opportunity.MainCompetitors__c" />
-                            <option value="Account.SLASerialNumber__c" />
-                            <option value="Account.UpsellOpportunity__c" />
-                            <option value="LTS_CS__c.Value__c" />
-                            <option value="Survey__c.Survey_Container_CSS__c" />
-                            <option value="Account.CustomerPriority__c" />
-                            <option value="SurveyQuestionResponse__c.Survey_Question__c" />
-                            <option value="Opportunity.OrderNumber__c" />
-                            <option value="Metric.OrigMetricId__c" />
-                            <option value="Case.EngineeringReqNumber__c" />
-                            <option value="Survey__c.URL__c" />
-                            <option value="Account.SLAExpirationDate__c" />
-                            <option value="Case.PotentialLiability__c" />
-                            <option value="SurveyTaker__c.Case__c" />
-                            <option value="Survey_Question__c.Type__c" />
-                            <option value="Survey_Question__c.Total_Responses__c" />
-                            <option value="SurveyTaker__c.Contact__c" />
-                            <option value="Survey__c.thankYouLink__c" />
-                            <option value="Survey_Question__c.Question__c" />
-                            <option value="Product2.Product_Type__c" />
-                            <option value="Survey__c.Submit_Response__c" />
-                            <option value="Survey_Question__c.OrderNumber__c" />
-                            <option value="Opportunity.TrackingNumber__c" />
-                            <option value="Order.User__c" />
-                            <option value="Account.Active__c" />
-                            <option value="CaseComment.ParentOrigin" />
-                            <option value="Opportunity.DeliveryInstallationStatus__c" />
-                            <option value="Knowledge__kav.Answer__c" />
-                            <option value="Contact.Level__c" />
-                            <option value="Product2.PosterUrl__c" />
-                            <option value="Goal.OrigGoalId__c" />
-                            <option value="SurveyTaker__c.Survey__c" />
-                            <option value="Account.SLA__c" />
-                            <option value="Survey_Question__c.Required__c" />
-                            <option value="SurveyQuestionResponse__c.Response__c" />
-                            <option value="Lead.SICCode__c" />
-                            <option value="Contact.Languages__c" />
-                            <option value="Survey__c.thankYouText__c" />
-                            <option value="SurveyTaker__c.Taken__c" />
-                            <option value="SurveyQuestionResponse__c.SurveyTaker__c" />
-                            <option value="CaseComment.CommentBody" />
-                            <option value="Survey__c.Hide_Survey_Name__c" />
-                            <option value="Knowledge__kav.Question__c" />
-                            <option value="Survey__c.Thank_You_Text__c" />
-                            <option value="Opportunity.CurrentGenerators__c" />
-                            <option value="Survey_Question__c.Choices__c" />
-                            <option value="Survey__c.Survey_Header__c" />
-                            <option value="SurveyTaker__c.Lead__c" />
-                            <option value="SurveyQuestionResponse__c.of_Time_Question_was_Responded_to__c" />
-                            <option value="Lead.ProductInterest__c" />
-                            <option value="Lead.NumberofLocations__c" />
-                            <option value="Case.Product__c" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomField" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
                             <option value="Order.AllActivatedOrders" />
-                            <option value="Case.MyCases" />
                             <option value="Order.AllDraftOrders" />
+                            <option value="Case.MyCases" />
                             <option value="User.ActiveUsers" />
                             <option value="Knowledge__kav.published_articles" />
                             <option value="Scorecard.MyScorecards" />
@@ -1122,16 +838,16 @@
                             <option value="Recommendation.All_Recommendations" />
                             <option value="Quote.mine" />
                             <option value="ConsumptionSchedule.My_ConsumptionSchedules" />
-                            <option value="Knowledge__kav.archived_articles" />
                             <option value="PartnerFundRequest.All_Partner_Fund_Requests" />
                             <option value="Contact.NewLastWeek" />
+                            <option value="Knowledge__kav.archived_articles" />
                             <option value="Knowledge__kav.draft_articles" />
                             <option value="Task.UnscheduledTasks" />
                             <option value="Task.CompletedTasks" />
                             <option value="Account.NewLastWeek" />
                             <option value="Account.MyAccounts" />
-                            <option value="Event.TodaysAgenda" />
                             <option value="Opportunity.AllOpportunities" />
+                            <option value="Event.TodaysAgenda" />
                             <option value="Task.OverdueTasks" />
                             <option value="Contact.BirthdaysThisMonth" />
                             <option value="ContactRequest.My_ContactRequests" />
@@ -1146,8 +862,8 @@
                             <option value="ConsumptionSchedule.All_ConsumptionSchedules" />
                             <option value="ContactPointTypeConsent.All_ContactPointTypeConsents" />
                             <option value="Survey_Question__c.All" />
-                            <option value="Case.Inquiry_Case" />
                             <option value="ChannelProgramLevel.All_Channel_Program_Levels" />
+                            <option value="Case.Inquiry_Case" />
                             <option value="Solution.AllReviewedSolutions" />
                             <option value="Account.PlatinumandGoldSLACustomers" />
                             <option value="Task.TodaysTasks" />
@@ -1155,8 +871,8 @@
                             <option value="Contract.AllInApprovalContracts" />
                             <option value="SurveyTaker__c.All" />
                             <option value="Lead.AllOpenLeads" />
-                            <option value="PartnerFundAllocation.All_Partner_Fund_Allocations" />
                             <option value="WorkFeedbackRequest.All" />
+                            <option value="PartnerFundAllocation.All_Partner_Fund_Allocations" />
                             <option value="Opportunity.NewThisWeek" />
                             <option value="Case.AllOpenCases" />
                             <option value="Order.AllOrders" />
@@ -1168,9 +884,9 @@
                             <option value="Contract.MyActivatedContracts" />
                             <option value="AccountBrand.All_Account_Brands" />
                             <option value="Contract.AllDraftContracts" />
-                            <option value="PartnerFundClaim.All_Partner_Fund_Claims" />
                             <option value="DataUsePurpose.All_DataUsePurposes" />
                             <option value="WorkFeedbackRequest.AboutTopics" />
+                            <option value="PartnerFundClaim.All_Partner_Fund_Claims" />
                             <option value="PartnerMarketingBudget.My_Partner_Marketing_Budgets" />
                             <option value="Task.DelegatedTasks" />
                             <option value="SocialPersona.AllSocialPersonas" />
@@ -1178,19 +894,19 @@
                             <option value="Contract.MyDraftContracts" />
                             <option value="Survey__c.standard_view" />
                             <option value="Lead.TodaysLeads" />
-                            <option value="Case.Hight_Priority_Case" />
                             <option value="Solution.AllUnreviewedSolutions" />
+                            <option value="Case.Hight_Priority_Case" />
                             <option value="Activity.UpcomingEvents" />
-                            <option value="Task.OpenTasks" />
                             <option value="ChannelProgramLevel.My_Channel_Program_Levels" />
+                            <option value="Task.OpenTasks" />
                             <option value="Opportunity.ClosingThisMonth" />
                             <option value="Account.AllAccounts" />
                             <option value="Contact.NewThisWeek" />
                             <option value="CollaborationGroup.All_ChatterGroups" />
                             <option value="Event.MyRecentEvents" />
                             <option value="Asset.AllAssets" />
-                            <option value="Scorecard.AllScorecards" />
                             <option value="AuthorizationFormConsent.All_AuthorizationFormConsents" />
+                            <option value="Scorecard.AllScorecards" />
                             <option value="Campaign.MyActiveCampaigns" />
                             <option value="Opportunity.MyOpportunities" />
                             <option value="AuthorizationForm.All_AuthorizationForms" />
@@ -1200,10 +916,10 @@
                             <option value="LiveChatTranscript.Chats_LiveChatTranscript" />
                             <option value="ChannelProgram.My_Channel_Programs" />
                             <option value="Task.RecurringTasks" />
-                            <option value="Case.AllClosedCases" />
                             <option value="Opportunity.Won" />
-                            <option value="Contract.MyInApprovalContracts" />
+                            <option value="Case.AllClosedCases" />
                             <option value="Activity.MyActivities" />
+                            <option value="Contract.MyInApprovalContracts" />
                             <option value="Event.MyTeamsUpcomingEvents" />
                             <option value="WorkFeedbackTemplate.All" />
                             <option value="Account.NewThisWeek" />
@@ -1211,8 +927,8 @@
                             <option value="Lead.ViewCustom1" />
                             <option value="Idea.Ideas_Last_7_Days" />
                             <option value="Event.MyUpcomingEvents" />
-                            <option value="Lead.ViewCustom2" />
                             <option value="Contract.AllActivatedContracts" />
+                            <option value="Lead.ViewCustom2" />
                           </set>
                         </option>
                         <option name="name" value="ListView" />
@@ -1224,6 +940,86 @@
                           </set>
                         </option>
                         <option name="name" value="HomePageLayout" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Case_Record_Page" />
+                            <option value="Product_Record_Page" />
+                            <option value="Survey_Taken_Record_Page1" />
+                            <option value="Product_Record_Page1" />
+                            <option value="Service_Cloud_UtilityBar" />
+                            <option value="LightningSalesConsole_UtilityBar" />
+                            <option value="LightningService_UtilityBar" />
+                            <option value="Product_Record_Page2" />
+                            <option value="Looney_Tunes_UtilityBar" />
+                            <option value="Survey_Taken_Record_Page" />
+                            <option value="Service_Resource_Record_Page" />
+                            <option value="LTS_DiscountManager" />
+                            <option value="Divisions" />
+                          </set>
+                        </option>
+                        <option name="name" value="FlexiPage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Survey_w_Questions_and_Answers" />
+                          </set>
+                        </option>
+                        <option name="name" value="ReportType" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Salesforce1" />
+                            <option value="AppSwitcher" />
+                          </set>
+                        </option>
+                        <option name="name" value="AppMenu" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="contactUs_Profile_profileSessionSetting1568367144787" />
+                            <option value="LTS_Community_User_profileSessionSetting1570704425539" />
+                          </set>
+                        </option>
+                        <option name="name" value="ProfileSessionSetting" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="contactUs_Profile_profilePasswordPolicy1568367144713" />
+                            <option value="LTS_Community_User_profilePasswordPolicy1570704425451" />
+                          </set>
+                        </option>
+                        <option name="name" value="ProfilePasswordPolicy" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Normal_Priority" />
+                            <option value="Chats" />
+                            <option value="Inquiry" />
+                            <option value="Hight_Priority" />
+                          </set>
+                        </option>
+                        <option name="name" value="Queue" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="LTS_CS__c-en_US" />
+                            <option value="SurveyQuestionResponse__c-en_US" />
+                            <option value="Knowledge__kav-en_US" />
+                            <option value="Survey_Question__c-en_US" />
+                            <option value="Survey__c-en_US" />
+                            <option value="SurveyTaker__c-en_US" />
+                            <option value="Account-en_US" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomObjectTranslation" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1243,20 +1039,6 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="LTS_CS__c-en_US" />
-                            <option value="SurveyQuestionResponse__c-en_US" />
-                            <option value="Knowledge__kav-en_US" />
-                            <option value="Survey_Question__c-en_US" />
-                            <option value="Survey__c-en_US" />
-                            <option value="SurveyTaker__c-en_US" />
-                            <option value="Account-en_US" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomObjectTranslation" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
                             <option value="live_agent_setup_flow" />
                           </set>
                         </option>
@@ -1269,8 +1051,8 @@
                             <option value="LABS_SF_please_visit" />
                             <option value="LTS_LastName" />
                             <option value="LABS_SF_Anonymous" />
-                            <option value="LTS_DivisionName" />
                             <option value="LABS_SF_Resources" />
+                            <option value="LTS_DivisionName" />
                             <option value="LTS_ButtonCheckout" />
                             <option value="LABS_SF_To_submit_ideas_or_issues" />
                             <option value="LABS_SF_SELECTTYPE" />
@@ -1281,6 +1063,7 @@
                             <option value="LTS_CartEmptyCommunicate" />
                             <option value="LABS_SF_Welcome_to_Survey_Force" />
                             <option value="LABS_SF_Email_Link_Anonymous" />
+                            <option value="LTS_SelectFamily" />
                             <option value="LABS_SF_Salesforce_Answers" />
                             <option value="LTS_ProductPageLink" />
                             <option value="LABS_SF_Chatter" />
@@ -1300,11 +1083,15 @@
                             <option value="LTS_ErrorOccured" />
                             <option value="LTS_OrderStatus" />
                             <option value="LABS_SF_Question" />
+                            <option value="LTS_SelectAll" />
                             <option value="LABS_SF_X3_Start_creating_your_first_survey" />
                             <option value="LTS_FirstName" />
                             <option value="LABS_SF_Answer_as" />
                             <option value="LABS_SF_SubmitSurvey" />
+                            <option value="LTS_StandardPrice" />
+                            <option value="LTS_SelectLabel" />
                             <option value="LABS_SF_SurveyForceIsOpenSource" />
+                            <option value="LTS_NoneLabel" />
                             <option value="LABS_SF_View_Sample_Survey" />
                             <option value="LABS_SF_Next_Steps" />
                             <option value="LTS_CartPageTitle" />
@@ -1312,17 +1099,20 @@
                             <option value="LTS_TotalPrice" />
                             <option value="LTS_AddToCart" />
                             <option value="LABS_SF_RequiredQuestion" />
+                            <option value="LTS_ProductName" />
                             <option value="LTS_OrderNumber" />
                             <option value="LTS_Town" />
                             <option value="LABS_SF_AddQuestion" />
                             <option value="LABS_SF_You_have_already_taken_this_survey" />
+                            <option value="LTS_DeselectAll" />
                             <option value="LTS_DivisionSearchComponent" />
                             <option value="LTS_Mobile" />
-                            <option value="LTS_Categories" />
                             <option value="LABS_SF_Required" />
+                            <option value="LTS_Categories" />
+                            <option value="LTS_SearchProductsNamePlaceholder" />
                             <option value="LABS_SF_User_Guide" />
-                            <option value="LABS_SF_Community" />
                             <option value="LABS_SF_Share_My_Survey" />
+                            <option value="LABS_SF_Community" />
                             <option value="LABS_SF_Email_Link_w_Contact_Merge" />
                             <option value="LABS_SF_SelectQuestionType" />
                             <option value="LTS_Status" />
@@ -1330,12 +1120,12 @@
                             <option value="LABS_SF_Email_Link_w_Contact_Case_Merge" />
                             <option value="LABS_SF_Survey_Submitted_Thank_you" />
                             <option value="LABS_SF_Make_a_Sample_Survey" />
-                            <option value="LABS_SF_Cancel" />
                             <option value="LABS_SF_Share" />
+                            <option value="LABS_SF_Cancel" />
                             <option value="LTS_UnexpectedErrorOccurred" />
                             <option value="LABS_SF_PleaseEnterTheList" />
-                            <option value="LTS_Company" />
                             <option value="LABS_SF_X2_External_Setup_Site" />
+                            <option value="LTS_Company" />
                             <option value="LABS_SF_Survey_Force_on_Github" />
                             <option value="LABS_SF_Getting_Help" />
                             <option value="LABS_SF_External_Please_Create_Site" />
@@ -1359,6 +1149,26 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="Looney Tunes Shop.Review_the_first_post" />
+                            <option value="Looney Tunes Shop.Flag_banned" />
+                            <option value="Looney Tunes Shop.Freeze_for_frequent_posting" />
+                            <option value="Looney Tunes Shop.Block_banned_keywords" />
+                            <option value="Looney Tunes Shop.Replace_banned" />
+                          </set>
+                        </option>
+                        <option name="name" value="ModerationRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Looney_Tunes_Shop1" />
+                          </set>
+                        </option>
+                        <option name="name" value="SiteDotCom" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="LexInputFieldCompCtrl_Test" />
                             <option value="ViewSurveyController" />
                             <option value="LTS_OrderDetailsController" />
@@ -1367,8 +1177,8 @@
                             <option value="SurveyAndQuestionController_Test" />
                             <option value="SiteRegisterControllerTest" />
                             <option value="ForgotPasswordControllerTest" />
-                            <option value="LTS_SoqlUtil" />
                             <option value="Utilities" />
+                            <option value="LTS_SoqlUtil" />
                             <option value="CommunitiesSelfRegConfirmControllerTest" />
                             <option value="GettingStartedController_Test" />
                             <option value="GSurveysController" />
@@ -1377,33 +1187,33 @@
                             <option value="ViewSurveyController_Test" />
                             <option value="LightningForgotPasswordControllerTest" />
                             <option value="LTS_antTest" />
-                            <option value="Message_Test" />
                             <option value="ChangePasswordControllerTest" />
-                            <option value="CommunitiesSelfRegControllerTest" />
+                            <option value="Message_Test" />
                             <option value="LightningLoginFormController" />
                             <option value="viewShareSurveyComponentController_Test" />
+                            <option value="CommunitiesSelfRegControllerTest" />
                             <option value="CommunitiesLoginControllerTest" />
                             <option value="LTS_DiscountManagerController" />
-                            <option value="LightningSelfRegisterControllerTest" />
                             <option value="ForgotPasswordController" />
+                            <option value="LightningSelfRegisterControllerTest" />
                             <option value="AutocreatedRegHandler1570531922773" />
-                            <option value="Utilities_Test" />
                             <option value="SFDCAccessController" />
+                            <option value="Utilities_Test" />
                             <option value="LTS_OrdersHandler" />
                             <option value="SurveyManagerController_Test" />
                             <option value="GSurveysController_Test" />
                             <option value="LightningForgotPasswordController" />
                             <option value="CommunitiesLandingControllerTest" />
                             <option value="LTS_PricebookHandler" />
-                            <option value="SiteRegisterController" />
                             <option value="SurveyAndQuestionController" />
+                            <option value="SiteRegisterController" />
                             <option value="SurveySitesUtil" />
                             <option value="SFQuestion_Test" />
                             <option value="SFQuestion" />
                             <option value="SFDCAccessControllerTest" />
                             <option value="SurveyTestingUtil" />
-                            <option value="LightningSelfRegisterController" />
                             <option value="ReportFinderUtil" />
+                            <option value="LightningSelfRegisterController" />
                             <option value="LTS_CustomSettingsUtils" />
                             <option value="Message" />
                             <option value="CommunitiesSelfRegConfirmController" />
@@ -1417,18 +1227,18 @@
                             <option value="viewSurveyResultsComponentController" />
                             <option value="CommunitiesLoginController" />
                             <option value="MyProfilePageControllerTest" />
-                            <option value="CommunitiesLandingController" />
                             <option value="LTS_SkillsBasedRouting" />
+                            <option value="CommunitiesLandingController" />
                             <option value="CSUtils" />
-                            <option value="SFDCAccessControlException" />
                             <option value="GettingStartedController" />
+                            <option value="SFDCAccessControlException" />
                             <option value="SiteLoginController" />
                             <option value="LTS_CartController" />
                             <option value="CSUtilsTest" />
                             <option value="LTS_ProductImageController" />
                             <option value="SurveyManagerController" />
-                            <option value="LTS_ProductsHandler" />
                             <option value="ChangePasswordController" />
+                            <option value="LTS_ProductsHandler" />
                             <option value="LTS_ContactUsController" />
                             <option value="LTS_OrderListPageController" />
                             <option value="LTS_ProductPageController" />
@@ -1457,37 +1267,74 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="standard__Sales" />
-                            <option value="standard__LightningService" />
-                            <option value="standard__ServiceConsole" />
-                            <option value="standard__SalesforceCMS" />
-                            <option value="standard__Community" />
-                            <option value="standard__AppLauncher" />
-                            <option value="ServiceCloud" />
-                            <option value="standard__LightningInstrumentation" />
-                            <option value="standard__Chatter" />
-                            <option value="standard__Platform" />
-                            <option value="LooneyTunes" />
-                            <option value="standard__Service" />
-                            <option value="standard__LightningSales" />
-                            <option value="Survey_Force" />
-                            <option value="standard__Marketing" />
-                            <option value="standard__Content" />
-                            <option value="standard__Sites" />
-                            <option value="standard__Insights" />
-                            <option value="standard__LightningBolt" />
-                            <option value="standard__LightningSalesConsole" />
+                            <option value="Internal Zone" />
                           </set>
                         </option>
-                        <option name="name" value="CustomApplication" />
+                        <option name="name" value="Community" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Chat_Agent" />
+                            <option value="Chat_Setup_Flow_CORS" />
                           </set>
                         </option>
-                        <option name="name" value="EmbeddedServiceLiveAgent" />
+                        <option name="name" value="CorsWhitelistOrigin" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Google" />
+                          </set>
+                        </option>
+                        <option name="name" value="AuthProvider" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Contact.Standard_Contact_Match_Rule_v1_1" />
+                            <option value="Lead.Standard_Lead_Match_Rule_v1_0" />
+                            <option value="Account.Standard_Account_Match_Rule_v1_0" />
+                          </set>
+                        </option>
+                        <option name="name" value="MatchingRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Account" />
+                            <option value="Individual" />
+                            <option value="Lead" />
+                            <option value="Contact" />
+                          </set>
+                        </option>
+                        <option name="name" value="MatchingRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Lead" />
+                            <option value="Case" />
+                          </set>
+                        </option>
+                        <option name="name" value="AssignmentRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Case.Standard" />
+                            <option value="Lead.Standard" />
+                            <option value="Case.Standard Case Assignment" />
+                          </set>
+                        </option>
+                        <option name="name" value="AssignmentRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Looney Tunes Shop" />
+                          </set>
+                        </option>
+                        <option name="name" value="ManagedTopics" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1510,95 +1357,57 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="ConsumptionSchedule" />
-                            <option value="Account" />
-                            <option value="TodayGoal" />
-                            <option value="AuthorizationFormConsent" />
-                            <option value="ActivityRecurrence2" />
-                            <option value="AssistantInteraction" />
-                            <option value="UserServicePresence" />
-                            <option value="Image" />
-                            <option value="MessagingEndUser" />
-                            <option value="ChannelProgram" />
-                            <option value="PartnerFundAllocation" />
-                            <option value="ExchangeUserMapping" />
-                            <option value="Asset" />
-                            <option value="AgentWork" />
-                            <option value="ContactPointTypeConsent" />
-                            <option value="PromptAction" />
-                            <option value="PartnerFundClaim" />
-                            <option value="UserEmailPreferredPerson" />
-                            <option value="Order" />
-                            <option value="StreamingChannel" />
-                            <option value="UserProvisioningRequest" />
-                            <option value="OrgDeleteRequest" />
-                            <option value="PartnerFundRequest" />
-                            <option value="CleanLeadBackup" />
-                            <option value="ComponentResponseCache" />
-                            <option value="Campaign" />
-                            <option value="AuthorizationForm" />
-                            <option value="Individual" />
-                            <option value="LiveAgentSession" />
-                            <option value="MacroUsage" />
-                            <option value="QuickTextUsage" />
-                            <option value="UserAppMenuCustomization" />
-                            <option value="RecordMergeHistory" />
-                            <option value="DataUsePurpose" />
-                            <option value="User" />
-                            <option value="ContactRequest" />
-                            <option value="AssistantRecommendation" />
-                            <option value="SiqUserBlacklist" />
-                            <option value="AccountBrand" />
-                            <option value="Macro" />
-                            <option value="PartnerMarketingBudget" />
-                            <option value="ManagedContentRelease" />
-                            <option value="Case" />
-                            <option value="FlowInterview" />
-                            <option value="Opportunity" />
-                            <option value="Lead" />
-                            <option value="ServiceResource" />
-                            <option value="ReportResultBlob" />
-                            <option value="Scorecard" />
-                            <option value="StreamActivityAccess" />
-                            <option value="QuickText" />
-                            <option value="DataUseLegalBasis" />
-                            <option value="Calendar2" />
-                            <option value="AuthorizationFormDataUse" />
-                            <option value="LiveChatTranscript" />
-                            <option value="NotifDeliveryUserPref" />
-                            <option value="Contact" />
-                            <option value="RequestsForAccessSIQ" />
-                            <option value="ListEmail" />
-                            <option value="MessagingSession" />
-                            <option value="AssistantProgress" />
-                            <option value="PendingServiceRouting" />
+                            <option value="Knowledge_LSF_Permission_Set" />
+                            <option value="Live_Agent_Setup_Flow" />
+                            <option value="Omni_Setup_Flow" />
                           </set>
                         </option>
-                        <option name="name" value="SharingRules" />
+                        <option name="name" value="PermissionSet" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Case.Product Support Process" />
-                            <option value="Lead.Lead conerting" />
-                            <option value="Opportunity.Sell instruments" />
-                            <option value="Case.Inquiry Process" />
+                            <option value="Chat_Agent" />
+                            <option value="Tier_1_Agents" />
+                            <option value="default_presence_config" />
                           </set>
                         </option>
-                        <option name="name" value="BusinessProcess" />
+                        <option name="name" value="PresenceUserConfig" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Case.Product_Support" />
-                            <option value="Metric.Progress" />
-                            <option value="Account.Division" />
-                            <option value="Metric.Completion" />
-                            <option value="Case.Inquiry" />
-                            <option value="Knowledge__kav.FAQ" />
+                            <option value="standard__Sales" />
+                            <option value="standard__LightningService" />
+                            <option value="standard__ServiceConsole" />
+                            <option value="standard__SalesforceCMS" />
+                            <option value="standard__Community" />
+                            <option value="standard__AppLauncher" />
+                            <option value="ServiceCloud" />
+                            <option value="standard__LightningInstrumentation" />
+                            <option value="standard__Chatter" />
+                            <option value="standard__Platform" />
+                            <option value="LooneyTunes" />
+                            <option value="standard__Service" />
+                            <option value="standard__LightningSales" />
+                            <option value="Survey_Force" />
+                            <option value="standard__Sites" />
+                            <option value="standard__Content" />
+                            <option value="standard__Marketing" />
+                            <option value="standard__LightningSalesConsole" />
+                            <option value="standard__LightningBolt" />
+                            <option value="standard__Insights" />
                           </set>
                         </option>
-                        <option name="name" value="RecordType" />
+                        <option name="name" value="CustomApplication" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Chat_Agent" />
+                          </set>
+                        </option>
+                        <option name="name" value="EmbeddedServiceLiveAgent" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1626,8 +1435,8 @@
                             <option value="Task.Defer_0" />
                             <option value="Task.UpdateStatus_0" />
                             <option value="Case.SendEmail" />
-                            <option value="Case.LogACall" />
                             <option value="Case.NewChildCase" />
+                            <option value="Case.LogACall" />
                             <option value="NewContact" />
                             <option value="NewCase" />
                             <option value="GuestCommunityCase" />
@@ -1636,6 +1445,16 @@
                           </set>
                         </option>
                         <option name="name" value="QuickAction" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Looney Tunes Shop.Members_without_contribution" />
+                            <option value="Looney Tunes Shop.Partner_and_Customer_members" />
+                            <option value="Looney Tunes Shop.Customer_Members" />
+                          </set>
+                        </option>
+                        <option name="name" value="UserCriteria" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1649,12 +1468,208 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Looney Tunes Shop.Members_without_contribution" />
-                            <option value="Looney Tunes Shop.Partner_and_Customer_members" />
-                            <option value="Looney Tunes Shop.Customer_Members" />
+                            <option value="Account-Account %28Sales%29 Layout" />
+                            <option value="Contact-Contact %28Support%29 Layout" />
+                            <option value="Product2-Product Layout" />
+                            <option value="Lead-Lead Layout" />
+                            <option value="ConsumptionRate-Consumption Rate Layout" />
+                            <option value="Case-Case %28Sales%29 Layout" />
+                            <option value="Contact-Contact Layout" />
+                            <option value="Lead-Lead %28Support%29 Layout" />
+                            <option value="CollaborationGroup-Group Layout" />
+                            <option value="DandBCompany-D%26B Company Layout" />
+                            <option value="ServiceResource-Service Resource Layout" />
+                            <option value="Case-Case %28Support%29 Layout" />
+                            <option value="AssetRelationship-Asset Relationship Layout" />
+                            <option value="Case-Inquiry Case Layout" />
+                            <option value="Macro-Macro Layout" />
+                            <option value="Order-Order Layout" />
+                            <option value="UserProvisioningRequest-User Provisioning Request Layout" />
+                            <option value="Solution-Solution Layout" />
+                            <option value="ScorecardMetric-Scorecard Metric Layout" />
+                            <option value="Pricebook2-Price Book Layout" />
+                            <option value="Event-Event Layout" />
+                            <option value="UserProvisioningLog-User Provisioning Log Layout" />
+                            <option value="UserProvAccount-User Provisioning Account Layout" />
+                            <option value="Contact-Contact %28Marketing%29 Layout" />
+                            <option value="Task-Task Layout" />
+                            <option value="ConsumptionSchedule-Consumption Schedule Layout" />
+                            <option value="SurveyQuestionResponse__c-Survey Question Answer Layout" />
+                            <option value="Opportunity-Opportunity Layout" />
+                            <option value="Asset-Asset Layout" />
+                            <option value="OrderItem-Order Product Layout" />
+                            <option value="DuplicateRecordSet-Duplicate Record Set Layout" />
+                            <option value="SurveyTaker__c-SurveyTaker Layout" />
+                            <option value="Quote-Quote Layout" />
+                            <option value="OpportunityLineItem-Opportunity Product Layout" />
+                            <option value="Case-Case Layout" />
+                            <option value="Contract-Contract Layout" />
+                            <option value="Account-Account Layout" />
+                            <option value="Campaign-Campaign Layout" />
+                            <option value="UserAlt-User Profile Layout" />
+                            <option value="LiveChatTranscriptActive-Chat Transcript %28In Progress%29 Layout" />
+                            <option value="LiveChatTranscriptEvent-Chat Transcript Event Layout" />
+                            <option value="CommunityMemberLayout-Community Member Layout" />
+                            <option value="ScorecardAssociation-Scorecard Association Layout" />
+                            <option value="LiveChatTranscript-Chat Transcript Layout" />
+                            <option value="Opportunity-Opportunity %28Sales%29 Layout" />
+                            <option value="Survey_Question__c-Survey Question Layout" />
+                            <option value="Survey__c-Survey Layout" />
+                            <option value="SocialPersona-Social Persona Layout" />
+                            <option value="Scorecard-Scorecard Layout" />
+                            <option value="Case-Case %28Marketing%29 Layout" />
+                            <option value="Case-Product Support Case Layout" />
+                            <option value="PricebookEntry-Price Book Entry Layout" />
+                            <option value="QuoteLineItem-Quote Line Item Layout" />
+                            <option value="LiveChatTranscriptWaiting-Chat Transcript %28Waiting%29 Layout" />
+                            <option value="CaseClose-Close Case Layout" />
+                            <option value="FeedItem-Feed Item Layout" />
+                            <option value="Idea-Idea Layout" />
+                            <option value="ContentVersion-Content Version Layout" />
+                            <option value="Opportunity-Opportunity %28Support%29 Layout" />
+                            <option value="Global-Global Layout" />
+                            <option value="Lead-Lead %28Sales%29 Layout" />
+                            <option value="Account-Account %28Marketing%29 Layout" />
+                            <option value="EmailMessage-Email Message Layout" />
+                            <option value="SocialPost-Social Post Layout" />
+                            <option value="Individual-Individual Layout" />
+                            <option value="ServiceResourceSkill-Service Resource Skill Layout" />
+                            <option value="ProductConsumptionSchedule-Product Consumption Schedule Layout" />
+                            <option value="Knowledge__kav-Knowledge Layout" />
+                            <option value="Account-Account %28Support%29 Layout" />
+                            <option value="CampaignMember-Campaign Member Page Layout" />
+                            <option value="QuickText-Quick Text Layout" />
+                            <option value="LiveAgentSession-Chat Session Layout" />
+                            <option value="User-User Layout" />
+                            <option value="Contact-Contact %28Sales%29 Layout" />
+                            <option value="Lead-Lead %28Marketing%29 Layout" />
+                            <option value="Knowledge__kav-Lightning Knowledge FAQ Layout" />
+                            <option value="AccountBrand-Account Brand Layout" />
+                            <option value="LiveChatVisitor-Chat Visitor Layout" />
+                            <option value="Opportunity-Opportunity %28Marketing%29 Layout" />
                           </set>
                         </option>
-                        <option name="name" value="UserCriteria" />
+                        <option name="name" value="Layout" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="ChangePassword" />
+                            <option value="SiteTemplate" />
+                            <option value="InMaintenance" />
+                            <option value="StdExceptionTemplate" />
+                            <option value="SiteRegister" />
+                            <option value="AnswersHome" />
+                            <option value="LTS_ContactUsPage" />
+                            <option value="SurveyPage" />
+                            <option value="SurveyManagerPage" />
+                            <option value="SiteLogin" />
+                            <option value="CommunitiesLanding" />
+                            <option value="Unauthorized" />
+                            <option value="SiteRegisterConfirm" />
+                            <option value="UnderConstruction" />
+                            <option value="TakeSurvey" />
+                            <option value="Getting_Started_With_Survey_Force" />
+                            <option value="FileNotFound" />
+                            <option value="CommunitiesSelfReg" />
+                            <option value="ForgotPassword" />
+                            <option value="Exception" />
+                            <option value="GSurveys" />
+                            <option value="IdeasHome" />
+                            <option value="ForgotPasswordConfirm" />
+                            <option value="BandwidthExceeded" />
+                            <option value="CommunitiesLogin" />
+                            <option value="MyProfilePage" />
+                            <option value="CommunitiesTemplate" />
+                            <option value="CommunitiesSelfRegConfirm" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexPage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SiteFooter" />
+                            <option value="LTS_Cart" />
+                            <option value="uiMessage" />
+                            <option value="SiteLogin" />
+                            <option value="SitePoweredBy" />
+                            <option value="viewShareSurveyComponent" />
+                            <option value="viewSurveyResultsComponent" />
+                            <option value="SiteHeader" />
+                            <option value="LexInputField" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexComponent" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="ConsumptionSchedule" />
+                            <option value="Account" />
+                            <option value="TodayGoal" />
+                            <option value="AuthorizationFormConsent" />
+                            <option value="ActivityRecurrence2" />
+                            <option value="AssistantInteraction" />
+                            <option value="UserServicePresence" />
+                            <option value="Image" />
+                            <option value="MessagingEndUser" />
+                            <option value="ChannelProgram" />
+                            <option value="PartnerFundAllocation" />
+                            <option value="ExchangeUserMapping" />
+                            <option value="AgentWork" />
+                            <option value="Asset" />
+                            <option value="PromptAction" />
+                            <option value="ContactPointTypeConsent" />
+                            <option value="PartnerFundClaim" />
+                            <option value="UserEmailPreferredPerson" />
+                            <option value="Order" />
+                            <option value="StreamingChannel" />
+                            <option value="UserProvisioningRequest" />
+                            <option value="PartnerFundRequest" />
+                            <option value="OrgDeleteRequest" />
+                            <option value="CleanLeadBackup" />
+                            <option value="ComponentResponseCache" />
+                            <option value="Campaign" />
+                            <option value="AuthorizationForm" />
+                            <option value="Individual" />
+                            <option value="LiveAgentSession" />
+                            <option value="MacroUsage" />
+                            <option value="QuickTextUsage" />
+                            <option value="UserAppMenuCustomization" />
+                            <option value="RecordMergeHistory" />
+                            <option value="DataUsePurpose" />
+                            <option value="ContactRequest" />
+                            <option value="User" />
+                            <option value="SiqUserBlacklist" />
+                            <option value="AssistantRecommendation" />
+                            <option value="AccountBrand" />
+                            <option value="Macro" />
+                            <option value="PartnerMarketingBudget" />
+                            <option value="ManagedContentRelease" />
+                            <option value="Case" />
+                            <option value="FlowInterview" />
+                            <option value="Opportunity" />
+                            <option value="Lead" />
+                            <option value="ServiceResource" />
+                            <option value="ReportResultBlob" />
+                            <option value="Scorecard" />
+                            <option value="StreamActivityAccess" />
+                            <option value="QuickText" />
+                            <option value="DataUseLegalBasis" />
+                            <option value="Calendar2" />
+                            <option value="AuthorizationFormDataUse" />
+                            <option value="LiveChatTranscript" />
+                            <option value="Contact" />
+                            <option value="NotifDeliveryUserPref" />
+                            <option value="RequestsForAccessSIQ" />
+                            <option value="ListEmail" />
+                            <option value="AssistantProgress" />
+                            <option value="MessagingSession" />
+                            <option value="PendingServiceRouting" />
+                          </set>
+                        </option>
+                        <option name="name" value="SharingRules" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1742,8 +1757,8 @@
                             <option value="unfiled$public/CommunityForgotPasswordEmailTemplate" />
                             <option value="unfiled$public/Email_survey_template" />
                             <option value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
-                            <option value="unfiled$public/CommunityChangePasswordEmailTemplate" />
                             <option value="unfiled$public/SupportSelfServiceResetPassword" />
+                            <option value="unfiled$public/CommunityChangePasswordEmailTemplate" />
                             <option value="unfiled$public/SupportSelfServiceNewLoginandPassword" />
                             <option value="unfiled$public/SupportCaseCreatedPhoneInquiries" />
                             <option value="unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE" />
@@ -1751,12 +1766,12 @@
                             <option value="unfiled$public/SupportCaseResponse" />
                             <option value="unfiled$public/SalesNewCustomerEmail" />
                             <option value="unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE" />
+                            <option value="unfiled$public/SupportEscalatedCaseNotification" />
                             <option value="unfiled$public/SupportCaseCreatedWebInquiries" />
                             <option value="unfiled$public/CommunityWelcomeEmailTemplate" />
-                            <option value="unfiled$public/SupportEscalatedCaseNotification" />
                             <option value="unfiled$public/CommunityVerificationEmailTemplate" />
-                            <option value="unfiled$public/SupportEscalatedCaseReassignment" />
                             <option value="unfiled$public/MarketingProductInquiryResponse" />
+                            <option value="unfiled$public/SupportEscalatedCaseReassignment" />
                             <option value="unfiled$public/CommunityLockoutEmailTemplate" />
                           </set>
                         </option>
@@ -1780,8 +1795,8 @@
         <option name="retrieveAndMergeDefault" value="false" />
         <option name="soqlQuerySettings">
           <SoqlQuerySettings>
-            <option name="documentText" value="SELECT Id, Name, Product2.Name, Product2.Family FROM PricebookEntry WHERE Pricebook2Id = '01s2o000001BswuAAC'AND Product2.Family LIKE '%'" />
-            <option name="splitterProportion" value="0.5860927" />
+            <option name="documentText" value="SELECT Id, Name From Pricebook2" />
+            <option name="splitterProportion" value="0.81795514" />
           </SoqlQuerySettings>
         </option>
       </ProjectWorkspaceSettings>
@@ -1814,12 +1829,15 @@
       </list>
     </option>
   </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fc54ba41-fb92-4711-87fd-50c481a4162f" name="Default Changelist" comment="" />
+      <changelist id="b1a84384-61c1-405c-b65e-9cd0fe8a5838" name="Default Changelist" comment="" />
       <created>1569932136941</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -1828,6 +1846,10 @@
       <workItem from="1569932208399" duration="279000" />
       <workItem from="1571301013671" duration="15088000" />
       <workItem from="1571385754243" duration="3150000" />
+      <workItem from="1571508850866" duration="9736000" />
+      <workItem from="1571564864956" duration="32284000" />
+      <workItem from="1571645249763" duration="10493000" />
+      <workItem from="1571685449181" duration="188000" />
     </task>
     <servers />
   </component>

@@ -5,8 +5,45 @@
 .THIS .searchCompContainer{
     /*width: 35vw;*/
     min-width: 550px;
+    width: 100%;
 }
 
 .THIS .searchRow :hover{
     background-color: dimgrey;
+}
+
+.THIS .rightMarginXXL{
+    margin-right: 31vw;
+}
+
+.THIS .tableWidthHalf{
+    min-width: 44vw;
+}
+
+.THIS.pageContainer{
+    min-height: 300px;
+}
+
+.THIS .pageBottom{
+    margin-top: 100px;
+}
+
+.THIS .percentInput{
+    min-width: 130px;
+}
+
+.THIS .orangeBorder{
+    border-color: chocolate;
+}
+
+.THIS .calculateButton{
+    min-width: 150px;
+}
+
+.THIS .templateInput{
+    min-width: 72px;
+}
+
+.THIS .buttonHeight{
+    max-height: 30px;
 }

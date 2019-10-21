@@ -1,0 +1,6 @@
+<aura:component description="LTS_CreateEditDiscount">
+    <aura:attribute type="String" name="pricebookId"/>
+    <aura:attribute type="String" name="pricebookRec"/>
+
+
+</aura:component>

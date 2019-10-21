@@ -176,6 +176,10 @@
                             <option name="name" value="LTS_CustomSettingsUtils" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_PriceBookUtils" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -382,6 +386,14 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LTS_DiscountManager" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_PricebookDetails" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CreateEditDiscount" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
