@@ -120,6 +120,14 @@
                 var navEvt = $A.get('e.force:navigateToURL');
                 navEvt.setParams({url: '/lts-orders'});
                 navEvt.fire();
+
+                var successToast = $A.get("e.force:showToast");
+                successToast.setParams({
+                    "title": "Success",
+                    "message": "Your order was created successfully",
+                    'type': 'success'
+                });
+                successToast.fire();
             }
             else{
                 var toastEvent = $A.get("e.force:showToast");

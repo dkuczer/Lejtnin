@@ -155,7 +155,7 @@ public with sharing class LTS_OrdersHandler {
     @AuraEnabled
     public static List<Order> getCurrentUserOrders(){
         String currentUserId = UserInfo.getUserId();
-        List<Order> userOrdersList = [SELECT Id, Name, EffectiveDate, User__c, TotalAmount, OrderNumber, Status FROM Order WHERE User__c = :currentUserId];
+        List<Order> userOrdersList = [SELECT Id, Name, EffectiveDate, User__c, TotalAmount, OrderNumber, Status FROM Order WHERE User__c = :currentUserId ORDER BY OrderNumber DESC];
 
         return userOrdersList;
     }
