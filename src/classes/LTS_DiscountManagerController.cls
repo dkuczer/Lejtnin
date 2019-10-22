@@ -22,7 +22,6 @@ public with sharing class LTS_DiscountManagerController {
 
     @AuraEnabled
     public static List<LTS_PricebookHandler.ProductPricebookWrapper> getPricebookEntries(String pricebookId){
-//        System.debug(LTS_PricebookHandler.getPricebookEntries(pricebookId));
         return LTS_PricebookHandler.getPricebookEntries(pricebookId);
     }
 }

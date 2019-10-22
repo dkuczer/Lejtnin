@@ -26,11 +26,9 @@ public with sharing class LTS_PricebookHandler {
             pbWrapper.price = pbEntry.UnitPrice;
             pbWrappersList.add(pbWrapper);
         }
-
-        System.debug('Returning prods: ' + pbWrappersList);
-
         return pbWrappersList;
     }
+
     @AuraEnabled
     public static List<Pricebook2> getPricebookNames(){
         List<Pricebook2> pricebooks = [SELECT Id, Name, StartDate__c, EndDate__c FROM Pricebook2];
@@ -58,7 +56,6 @@ public with sharing class LTS_PricebookHandler {
             insert pbEntriesList;
         }
         else{
-            System.debug('*** UPDATING PB ***');
             List<Pricebook2> pbList = [SELECT Id, Name, StartDate__c, EndDate__c FROM Pricebook2 WHERE Id = :pbId];
             if(!pbList.isEmpty()){
                 pbList[0].Name = pbName;
@@ -76,7 +73,6 @@ public with sharing class LTS_PricebookHandler {
                     pbEntry.UnitPrice = pbWrapper.newPrice;
                     pbEntriesList.add(pbEntry);
                 }
-
                 insert pbEntriesList;
             }
         }

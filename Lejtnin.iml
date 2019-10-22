@@ -392,10 +392,6 @@
                             <option name="name" value="LTS_PricebookDetails" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="LTS_CreateEditDiscount" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="AuraDefinitionBundle" />
@@ -1212,6 +1208,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Pricebook2" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="PricebookEntry" />

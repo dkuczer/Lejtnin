@@ -7,7 +7,14 @@
                 component.set('v.productsFamilies', results);
             }
             else{
-                console.log('Hey, at least js is working');
+                var failedToast = $A.get("e.force:showToast");
+                failedToast.setParams({
+                    "title": "Failed",
+                    "message": "An unexpected error has occurred during component initialization",
+                    'type': 'error'
+                });
+                failedToast.fire();
+                $A.get('e.force:refreshView').fire();
             }
         });
         $A.enqueueAction(action);
@@ -33,10 +40,16 @@
             if(response.getState() === 'SUCCESS'){
                 var results = response.getReturnValue();
                 component.set('v.availableProducts', results);
-                console.log('results');
             }
             else{
-                console.log('Hey, at least js is working');
+                var failedToast = $A.get("e.force:showToast");
+                failedToast.setParams({
+                    "title": "Failed",
+                    "message": "An unexpected error has occurred while retrieving available products",
+                    'type': 'error'
+                });
+                failedToast.fire();
+                $A.get('e.force:refreshView').fire();
             }
         });
         $A.enqueueAction(action);
@@ -47,10 +60,16 @@
             if(response.getState() === 'SUCCESS'){
                 var results = response.getReturnValue();
                 component.set('v.pricebookList', results);
-                console.log('results');
             }
             else{
-                console.log('Hey, at least js is working');
+                var failedToast = $A.get("e.force:showToast");
+                failedToast.setParams({
+                    "title": "Failed",
+                    "message": "An unexpected error has occurred while retrieving existing price books",
+                    'type': 'error'
+                });
+                failedToast.fire();
+                $A.get('e.force:refreshView').fire();
             }
         });
         $A.enqueueAction(action);
@@ -59,10 +78,6 @@
         var availableProducts = component.get('v.availableProducts');
         var availableProdIndex = event.target.id;
         var selectedProducts = component.get('v.selectedProducts');
-
-        console.log(availableProducts.length);
-        console.log(availableProdIndex);
-        console.log(availableProducts[availableProdIndex].prodName);
 
         selectedProducts.push(availableProducts[availableProdIndex]);
         availableProducts.slice(availableProdIndex, 1);
@@ -121,11 +136,24 @@
 
         action.setCallback(this, function(response){
             if(response.getState() === 'SUCCESS'){
-                var results = response.getReturnValue();
-                console.log('PB SAVED');
+                var successToast = $A.get("e.force:showToast");
+                successToast.setParams({
+                    "title": "Success",
+                    "message": "Discount created successfully",
+                    'type': 'success'
+                });
+                successToast.fire();
+                $A.get('e.force:refreshView').fire();
             }
             else{
-                console.log('Hey, at least js is working');
+                var failedToast = $A.get("e.force:showToast");
+                failedToast.setParams({
+                    "title": "Failed",
+                    "message": "An unexpected error has occurred while saving this price book",
+                    'type': 'error'
+                });
+                failedToast.fire();
+                $A.get('e.force:refreshView').fire();
             }
         });
         $A.enqueueAction(action);
@@ -134,7 +162,7 @@
         var selectedProducts = component.get('v.selectedProducts');
         var selectedProdIndex = event.target.id;
 
-        selectedProducts[selectedProdIndex].newPrice = ((selectedProducts[selectedProdIndex].price * selectedProducts[selectedProdIndex].percentage) / 100);
+        selectedProducts[selectedProdIndex].newPrice = (selectedProducts[selectedProdIndex].price - ((selectedProducts[selectedProdIndex].price * selectedProducts[selectedProdIndex].percentage) / 100));
         component.set('v.selectedProducts', selectedProducts);
     },
     templatePercent: function (component) {
@@ -142,7 +170,7 @@
         var templatePercent = component.get('v.setForAllPercentage');
 
         for(var i = 0; i < selectedProducts.length; i++){
-            selectedProducts[i].newPrice = ((selectedProducts[i].price * templatePercent) / 100);
+            selectedProducts[i].newPrice = (selectedProducts[i].price - ((selectedProducts[i].price * templatePercent) / 100));
             selectedProducts[i].percentage = templatePercent;
         }
         component.set('v.selectedProducts', selectedProducts);
@@ -184,7 +212,14 @@
                 }
             }
             else{
-                console.log('Hey, at least js is working');
+                var failedToast = $A.get("e.force:showToast");
+                failedToast.setParams({
+                    "title": "Failed",
+                    "message": "An unexpected error has occurred while opening selected price book",
+                    'type': 'error'
+                });
+                failedToast.fire();
+                $A.get('e.force:refreshView').fire();
             }
         });
         $A.enqueueAction(action);
