@@ -48,6 +48,10 @@
     max-height: 30px;
 }
 
-.THIS .existingPBTable{
-    max-height: 200px;
+.THIS .prodNameColumn{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+
 }

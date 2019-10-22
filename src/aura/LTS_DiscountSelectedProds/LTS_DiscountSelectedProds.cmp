@@ -1,0 +1,70 @@
+<aura:component description="LTS_DiscountSelectedProds" controller="LTS_DiscountManagerController">
+    <aura:attribute type="List" name="selectedProducts"/>
+    <aura:attribute type="String" name="newPricebookName"/>
+    <aura:attribute type="String" name="pricebookId"/>
+    <aura:attribute type="Date" name="newPricebookStartDate"/>
+    <aura:attribute type="Date" name="newPricebookEndDate"/>
+    <aura:attribute type="Double" name="setForAllPrice"/>
+    <aura:attribute type="Double" name="setForAllPercentage"/>
+    <aura:attribute type="List" name="productsFamilies"/>
+    <div>
+        <h1 class="slds-text-heading_large">{!$Label.c.LTS_SelectedProducts}</h1>
+        <lightning:layout class="slds-m-top--medium" horizontalAlign="spread">
+            <lightning:layout verticalAlign="end">
+                <lightning:layout class="slds-m-right--large">
+                    <lightning:input label="" value="{!v.setForAllPercentage}" variant="label-hidden" type="number" min="1" max="100" class="templateInput slds-m-right--x-small"/>
+                    <lightning:button class="calculateButton" onclick="{!c.templatePercent}">{!$Label.c.LTS_DiscountAll}</lightning:button>
+                </lightning:layout>
+                <lightning:layout class="slds-m-right--xx-large">
+                    <lightning:input label="" value="{!v.setForAllPrice}" variant="label-hidden" type="number" class="templateInput slds-m-right--x-small"/>
+                    <lightning:button class="calculateButton" onclick="{!c.templatePrice}">{!$Label.c.LTS_SetPriceAll}</lightning:button>
+                </lightning:layout>
+            </lightning:layout>
+        </lightning:layout>
+        <div class="slds-m-top--large">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered tableWidthHalf">
+                <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate prodNameColumn" >{!$Label.c.LTS_ProductName}</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" >{!$Label.c.LTS_StandardPrice}</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" >{!$Label.c.LTS_Discount}</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" >{!$Label.c.LTS_NewPrice}</div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <aura:iteration items="{!v.selectedProducts}" var="selectedProd" indexVar="selectedIndex">
+                    <tr id="{!selectedIndex}">
+                        <th class="prodNameColumn"><p title="{!selectedProd.prodName}" class="prodNameColumn">{!selectedProd.prodName}</p></th>
+                        <th><lightning:formattedNumber value="{!selectedProd.price}" style="currency" /></th>
+                        <th id="{!selectedIndex}">
+                            <lightning:layout class="percentInput">
+                                <lightning:input label="" value="{!selectedProd.percentage}" variant="label-hidden" type="number" min="1" max="100" class="slds-m-right--x-small"/>
+                                <lightning:button onclick="{!c.calculatePercent}">
+                                    <lightning:icon size="x-small" iconName="utility:magicwand" alternativeText="%" />
+                                </lightning:button>
+                            </lightning:layout>
+                        </th>
+                        <th><lightning:input label="" class="orangeBorder" value="{!selectedProd.newPrice}" variant="label-hidden"/> </th>
+                        <th id="{!selectedIndex}"><lightning:button onclick="{!c.deselectProduct}">
+                            <lightning:icon size="x-small" iconName="utility:close" alternativeText="%" />
+                        </lightning:button></th>
+                    </tr>
+                </aura:iteration>
+                </tbody>
+            </table>
+            <aura:if isTrue="{!!empty(v.selectedProducts)}">
+                <lightning:layout horizontalAlign="end" class="slds-m-top--small slds-m-right--medium">
+                    <lightning:button onclick="{!c.deselectAll}">{!$Label.c.LTS_DeselectAll}</lightning:button>
+                </lightning:layout>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

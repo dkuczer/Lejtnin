@@ -31,7 +31,8 @@ public with sharing class LTS_PricebookHandler {
 
     @AuraEnabled
     public static List<Pricebook2> getPricebookNames(){
-        List<Pricebook2> pricebooks = [SELECT Id, Name, StartDate__c, EndDate__c FROM Pricebook2];
+        String standardPBId = LTS_CustomSettingsUtils.getStandardPricebookId();
+        List<Pricebook2> pricebooks = [SELECT Id, Name, StartDate__c, EndDate__c FROM Pricebook2 WHERE Id != :standardPBId];
         return pricebooks;
     }
 

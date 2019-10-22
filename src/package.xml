@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>LTS_CartController</members>
         <members>LTS_CustomSettingsUtils</members>
-        <members>LTS_OrdersHandler</members>
         <members>LTS_SoqlUtil</members>
         <members>LTS_antTest</members>
         <members>LTS_ProductImageController</members>
