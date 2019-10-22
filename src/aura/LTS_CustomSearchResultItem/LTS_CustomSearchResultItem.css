@@ -1,7 +1,3 @@
-/*.THIS .tile {*/
-/*    background-color: blue;*/
-/*}*/
-
 .THIS.tile {
     background-color: white;
     cursor: pointer;
@@ -12,12 +8,18 @@
 
 }
 
-.THIS .product-name{
-
-    /*width: 230px;*/
-
+.THIS .oldPrice{
+    text-decoration: line-through;
+    color: dimgrey;
+    font-size: 14px;
 }
 
-/*.THIS .price {*/
-/*    font*/
-/*}*/
+.THIS .newPrice{
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.THIS .standardPrice{
+    font-size: 14px;
+}

@@ -1,7 +1,9 @@
 <aura:component implements="force:hasRecordId" access="global" description="LTS_CustomSearchResultItem" controller="LTS_ProductImageController">
+    <aura:attribute type="LTS_ProductPageController.ProductDetailsWrapper" name="productDetailsWrapper"/>
     <aura:attribute name="record" type="Object"/>
     <aura:attribute name="simpleRecord" type="Product2"/>
     <aura:attribute name="recordError" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
     <force:recordData aura:id="recordLoader"
                       recordId="{!v.recordId}"
                       layoutType="COMPACT"
@@ -13,11 +15,21 @@
     <div class="slds-page-header tile" role="banner" onclick="{!c.handleItemClick}">
         <div class="slds-grid resultsContainer">
             <div class="slds-col slds-size--1-of-1">
-                    <c:LTS_Poster recordId="{!v.recordId}" isMiniature="true"/>
-                    <div>
-                        <p class="slds-text-heading--label product-name">{!v.simpleRecord.Name}</p>
-                        <p class="slds-text-heading_small price">50$</p>
-                    </div>
+                <c:LTS_Poster recordId="{!v.recordId}" isMiniature="true"/>
+                <div>
+                    <p class="slds-text-heading--label product-name">{!v.simpleRecord.Name}</p>
+                    <aura:if isTrue="{!v.productDetailsWrapper.specialPrice}">
+                        <div class="slds-grid resultsContainer">
+                            <div class="slds-col slds-size--1-of-1">
+                                <div class="slds-text-heading--large oldPrice"><ui:outputCurrency value="{!v.productDetailsWrapper.standardPrice.UnitPrice}"/></div>
+                                <div class="slds-text-heading--large newPrice"><ui:outputCurrency value="{!v.productDetailsWrapper.specialPrice.UnitPrice}"/></div>
+                            </div>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!!v.productDetailsWrapper.specialPrice}">
+                        <div class="slds-text-heading--large standardPrice"><ui:outputCurrency value="{!v.productDetailsWrapper.standardPrice.UnitPrice}"/></div>
+                    </aura:if>
+                </div>
             </div>
         </div>
     </div>

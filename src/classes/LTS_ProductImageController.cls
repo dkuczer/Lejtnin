@@ -57,4 +57,9 @@ public with sharing class LTS_ProductImageController {
             return products[0].PosterUrl__c;
         }
     }
+
+    @AuraEnabled
+    public static LTS_ProductPageController.ProductDetailsWrapper getProductById(String productId){
+        return LTS_ProductPageController.getProductById(productId);
+    }
 }
