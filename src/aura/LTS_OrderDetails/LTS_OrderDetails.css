@@ -1,0 +1,39 @@
+.THIS .product-poster{
+    height: 70px;
+}
+
+.THIS .quantity-label{
+    height: 30px;
+}
+.THIS .quantity-div{
+    /*position: relative;*/
+    height: 40px;
+}
+
+.THIS .quantity-input{
+    /*position: absolute;*/
+    /*top: 0px;*/
+    max-width: 70px;
+}
+
+.THIS .closeButton{
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.THIS .closeButton:hover{
+    opacity: 0.8;
+    fill: red;
+}
+
+.THIS .closeButton:hover + svg{
+    fill: red;
+}
+
+.THIS .noOrderMessage{
+    margin-top: 20vh;
+}
+
+.THIS .ratingButton{
+    cursor: pointer;
+}

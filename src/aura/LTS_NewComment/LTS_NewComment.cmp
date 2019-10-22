@@ -1,0 +1,17 @@
+<aura:component description="LTS_NewComment" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute type="Boolean" name="alreadyRated"/>
+    <aura:attribute type="String" name="orderId"/>
+    <aura:attribute type="String" name="orderItemId"/>
+    <aura:attribute type="String" name="productId"/>
+    <aura:attribute type="String" name="commentBody"/>
+    <aura:attribute type="Integer" name="rating"/>
+    <aura:attribute type="List" name="starsClasses"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <ul class="slds-list_horizontal">
+        <aura:iteration items="{!v.starsClasses}" var="starClass" indexVar="starIndex">
+            <li id="{!starIndex}"><img  class="{!starClass}" onmouseenter="{!c.starsHover}" onmouseout="{!c.starsEndHover}" onclick="{!c.setRating}"
+                     src="{!$Resource.starIcon}" alt=""/></li>
+        </aura:iteration>
+    </ul>
+
+</aura:component>

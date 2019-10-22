@@ -1,0 +1,9 @@
+.THIS .ratingStar {
+    max-height: 30px;
+    max-width: 30px;
+}
+
+
+.THIS .starGray {
+    filter: grayscale(100%);
+}

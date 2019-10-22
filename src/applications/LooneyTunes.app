@@ -12,6 +12,7 @@
     <label>Looney Tunes</label>
     <navType>Standard</navType>
     <tabs>standard-Account</tabs>
+    <tabs>Discount_Manager</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Opportunity</tabs>
