@@ -1,9 +1,20 @@
-.THIS .ratingStar {
-    max-height: 30px;
-    max-width: 30px;
+.THIS .poster{
+    max-height: 380px;
+    min-height: 380px;
 }
 
+.THIS .ratingContainer{
+    width: 800px;
+    height: 410px;
+    position: relative;
+}
 
-.THIS .starGray {
-    filter: grayscale(100%);
+.THIS .commentContainer{
+    position: absolute;
+    bottom: 0;
+}
+
+.THIS .commentBody textarea{
+    height: 250px;
+    width: 600px;
 }

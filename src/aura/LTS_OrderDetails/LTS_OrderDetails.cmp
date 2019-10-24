@@ -49,6 +49,4 @@
             <h1 class="slds-text-heading_large slds-m-top--large slds-m-bottom--large noOrderMessage">{!$Label.c.LTS_NoOrderCommunicate}</h1>
         </lightning:layout>
     </aura:if>
-
-
 </aura:component>

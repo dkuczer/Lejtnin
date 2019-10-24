@@ -1,0 +1,45 @@
+<aura:component description="LTS_UsersCommentsList">
+    <aura:attribute type="List" name="comments"/>
+    <aura:if isTrue="{!empty(v.comments)}">
+        <lightning:layout horizontalAlign="center">
+            <div>
+                <lightning:layout horizontalAlign="center">
+                    <h1 class="slds-text-heading--large">{!$Label.c.LTS_UsersReviews}</h1>
+                </lightning:layout>
+                <ul class="slds-has-dividers_bottom-space commentContainer">
+                    <li class="slds-item commentContainer">
+                        <lightning:layout horizontalAlign="center">
+                            <p class="slds-text-heading_medium">{!$Label.c.LTS_NoReviews}</p>
+                        </lightning:layout>
+                    </li>
+                </ul>
+            </div>
+        </lightning:layout>
+    </aura:if>
+    <aura:if isTrue="{!!empty(v.comments)}">
+        <lightning:layout horizontalAlign="center">
+            <div>
+                <lightning:layout horizontalAlign="center">
+                    <h1 class="slds-text-heading--large">{!$Label.c.LTS_UsersReviews}</h1>
+                </lightning:layout>
+                <ul class="slds-has-dividers_bottom-space commentContainer">
+                    <aura:iteration items="{!v.comments}" var="comment">
+                        <li class="slds-item commentContainer">
+                            <div>
+                                <lightning:layout horizontalAlign="spread">
+                                    <p class="slds-text-heading_small userName">{!comment.CreatedBy.Name + ':'}</p>
+                                    <div class="stars">
+                                        <c:StarRating value="{!comment.Rating__c}" readonly="true"/>
+                                    </div>
+                                </lightning:layout>
+                                <lightning:layout class="slds-m-top--medium">
+                                    <p class="slds-text-heading_small">{!comment.CommentBody__c}</p>
+                                </lightning:layout>
+                            </div>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </div>
+        </lightning:layout>
+    </aura:if>
+</aura:component>

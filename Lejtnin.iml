@@ -168,6 +168,18 @@
                             <option name="name" value="LTS_OrdersHandler" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CommentAndRatingController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CommentsAndRatingHandler" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ProductPageController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -373,11 +385,23 @@
                             <option name="name" value="searchDivisionsFormResults" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="LTS_ProductComment" />
+                            <option name="name" value="LTS_NewComment" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="LTS_NewComment" />
+                            <option name="name" value="StarRating" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_OrderDetails" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ProductDetails" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_UsersCommentsList" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>

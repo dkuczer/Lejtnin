@@ -25,10 +25,15 @@
                 }
             }
             else{
+                var errors = response.getError();
+                var errorsMessage = '';
+                if (errors && Array.isArray(errors) && errors.length > 0) {
+                    errorsMessage = errors[0].message;
+                }
                 var toastEvent = $A.get("e.force:showToast");
                 toastEvent.setParams({
                     "title": "Failure",
-                    "message": "An error has occurred while retrieving details of your order"
+                    "message": "An error has occurred while retrieving details of your order" + errorsMessage
                 });
                 toastEvent.fire();
             }
@@ -36,17 +41,13 @@
         $A.enqueueAction(action);
     },
     rateProduct: function (component, event) {
-
         var orderItems = component.get('v.orderProducts');
         var orderItemIndex = event.target.id;
-
-            // <aura:attribute type="String" name="orderId"/>
-            // <aura:attribute type="String" name="orderItemId"/>
-            // <aura:attribute type="String" name="productId"/>
-
         var urlEvent = $A.get("e.force:navigateToURL");
         urlEvent.setParams({
-            "url": "lts-rate-product"
+            'url': '/lts-rate-product?prodId=' + orderItems[orderItemIndex].Product2.Id
+            + '&orderId=' + orderItems[orderItemIndex].Order.Id
+            + '&orderItemId=' + orderItems[orderItemIndex].Id
         });
         urlEvent.fire();
     }

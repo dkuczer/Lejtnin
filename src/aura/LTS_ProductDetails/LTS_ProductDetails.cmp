@@ -1,0 +1,40 @@
+<aura:component description="LTS_ProductDetails" implements="lightning:isUrlAddressable,forceCommunity:availableForAllPageTypes" controller="LTS_ProductPageController">
+    <aura:attribute type="String" name="productId"/>
+    <aura:attribute type="LTS_ProductPageController.ProductDetailsWrapper" name="productDetailsWrapper"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:layout class="slds-m-top--medium container">
+        <lightning:layout >
+            <c:LTS_ImagesSlideshow mainImage="{!v.productDetailsWrapper.productRecord.PosterUrl__c}" productId="{!v.productId}"/>
+        </lightning:layout>
+        <lightning:layout class="margin-left-large details">
+            <div class="slds-grid resultsContainer">
+                <div class="slds-col slds-size--1-of-1">
+                    <lightning:layout >
+                        <h1 class="slds-text-heading_large slds-m-right--medium">{!v.productDetailsWrapper.productRecord.Name}</h1>
+                        <c:StarRating value="{!v.productDetailsWrapper.rating}" readonly="true"/>
+                    </lightning:layout>
+
+                    <div class="slds-text-heading_small slds-m-top--medium"><lightning:formattedText value="{!v.productDetailsWrapper.productRecord.Description}"/></div>
+                    <lightning:layout verticalAlign="center" class="slds-m-top--large">
+                        <aura:if isTrue="{!v.productDetailsWrapper.specialPrice}">
+                            <div class="slds-grid resultsContainer">
+                                <div class="slds-col slds-size--1-of-1">
+                                    <div class="slds-text-heading--large oldPrice"><ui:outputCurrency value="{!v.productDetailsWrapper.standardPrice.UnitPrice}"/></div>
+                                    <div class="slds-text-heading--large newPrice"><ui:outputCurrency value="{!v.productDetailsWrapper.specialPrice.UnitPrice}"/></div>
+                                </div>
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!!v.productDetailsWrapper.specialPrice}">
+                            <div class="slds-text-heading--large"><ui:outputCurrency value="{!v.productDetailsWrapper.standardPrice.UnitPrice}"/></div>
+                        </aura:if>
+                        <lightning:button class="slds-button slds-m-left--large" onclick="{!c.handleAddToCart}">
+                            <lightning:icon iconName="utility:cart" class="slds-m-top--x-small slds-m-bottom--x-small slds-m-right--small"/> {!$Label.c.LTS_AddToCart}
+                        </lightning:button>
+                    </lightning:layout>
+                </div>
+            </div>
+        </lightning:layout>
+    </lightning:layout>
+    <hr class="slds-m-top--xx-large slds-m-bottom--xx-large"/>
+    <c:LTS_UsersCommentsList comments="{!v.productDetailsWrapper.comments}"/>
+</aura:component>

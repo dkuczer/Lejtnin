@@ -1,17 +1,39 @@
-<aura:component description="LTS_NewComment" implements="forceCommunity:availableForAllPageTypes" access="global">
-    <aura:attribute type="Boolean" name="alreadyRated"/>
-    <aura:attribute type="String" name="orderId"/>
-    <aura:attribute type="String" name="orderItemId"/>
-    <aura:attribute type="String" name="productId"/>
+<aura:component description="LTS_NewComment" implements="forceCommunity:availableForAllPageTypes" access="global" controller="LTS_CommentAndRatingController">
+    <aura:attribute type="Boolean" name="readOnly"/>
+    <aura:attribute type="Product2" name="ratedProduct"/>
     <aura:attribute type="String" name="commentBody"/>
-    <aura:attribute type="Integer" name="rating"/>
+    <aura:attribute type="Integer" name="rating" default="0"/>
     <aura:attribute type="List" name="starsClasses"/>
+    <aura:attribute type="List" name="commentsList"/>
+
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-    <ul class="slds-list_horizontal">
-        <aura:iteration items="{!v.starsClasses}" var="starClass" indexVar="starIndex">
-            <li id="{!starIndex}"><img  class="{!starClass}" onmouseenter="{!c.starsHover}" onmouseout="{!c.starsEndHover}" onclick="{!c.setRating}"
-                     src="{!$Resource.starIcon}" alt=""/></li>
-        </aura:iteration>
-    </ul>
+
+    <div>
+        <lightning:layout>
+            <div>
+                <img class="poster" src="{!v.ratedProduct.PosterUrl__c}" alt=""/>
+                <lightning:layout horizontalAlign="center">
+                    <a href="{!$Label.c.LTS_ProductPageLink + v.ratedProduct.Id}" class="slds-text-heading_medium">{!v.ratedProduct.Name}</a>
+                </lightning:layout>
+            </div>
+            <aura:if isTrue="{!!v.readOnly}">
+                <div class="ratingContainer slds-p-top--medium slds-m-left--large">
+                    <div class="commentRating">
+                        <p class="slds-text-heading_medium slds-m-bottom--small">{!$Label.c.LTS_RateProduct}</p>
+                        <c:StarRating value="{!v.rating}"/>
+                    </div>
+                    <div class="commentContainer">
+                        <p class="slds-text-heading_medium slds-m-bottom--small slds-m-top--medium">{!$Label.c.LTS_LeaveYourOpinion}</p>
+                        <lightning:textarea name="myTextArea" class="commentBody" value="{!v.commentBody}"
+                                            label="" variant="label-hidden" maxlength="1000" />
+                    </div>
+                </div>
+            </aura:if>
+        </lightning:layout>
+        <lightning:layout horizontalAlign="center" class="slds-m-top--medium">
+            <lightning:button onclick="{!c.saveComment}">{!$Label.c.LTS_Post}</lightning:button>
+        </lightning:layout>
+<!---->
+    </div>
 
 </aura:component>
