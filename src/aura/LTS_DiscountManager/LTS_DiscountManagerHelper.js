@@ -7,10 +7,14 @@
                 component.set('v.productsFamilies', results);
             }
             else{
+                var errorsMessage = '';
+                if (errors && Array.isArray(errors) && errors.length > 0) {
+                    errorsMessage = errors[0].message;
+                }
                 var failedToast = $A.get("e.force:showToast");
                 failedToast.setParams({
                     "title": "Failed",
-                    "message": "An unexpected error has occurred during component initialization",
+                    "message": "An unexpected error has occurred during component initialization; " + errorsMessage,
                     'type': 'error'
                 });
                 failedToast.fire();
@@ -28,9 +32,13 @@
             }
             else{
                 var failedToast = $A.get("e.force:showToast");
+                var errorsMessage = '';
+                if (errors && Array.isArray(errors) && errors.length > 0) {
+                    errorsMessage = errors[0].message;
+                }
                 failedToast.setParams({
                     "title": "Failed",
-                    "message": "An unexpected error has occurred while retrieving existing price books",
+                    "message": "An unexpected error has occurred while retrieving existing price books; " + errorsMessage,
                     'type': 'error'
                 });
                 failedToast.fire();
