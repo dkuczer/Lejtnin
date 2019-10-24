@@ -2,13 +2,12 @@
     <aura:attribute type="List" name="pricebookList"/>
     <aura:attribute type="List" name="selectedProducts"/>
     <aura:attribute type="Boolean" name="showCreatingForm" default="false"/>
-    <aura:attribute type="String" name="testStringParent" default="DUPA"/>
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:attribute type="String" name="newPricebookName"/>
     <aura:attribute type="String" name="pricebookId"/>
     <aura:attribute type="Date" name="newPricebookStartDate"/>
     <aura:attribute type="Date" name="newPricebookEndDate"/>
     <aura:attribute type="String" name="editorHeader"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 
     <lightning:card class="slds-p-left--medium slds-p-right--medium">
         <div>
