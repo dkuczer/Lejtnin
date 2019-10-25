@@ -1,0 +1,22 @@
+<aura:component description="LTS_ComplainCase" controller="LTS_ComplainsController">
+    <aura:attribute type="Boolean" name="showForm"/>
+    <aura:attribute type="String" name="orderId"/>
+    <aura:attribute type="String" name="caseSubject"/>
+    <aura:attribute type="String" name="caseDescription"/>
+
+    <div class="caseContainer">
+        <div class="slds-m-bottom--medium">
+            <p class="slds-text-heading_small slds-m-bottom--small">{!$Label.c.LTS_CaseSubject}</p>
+            <lightning:input label="" variant="label-hidden" type="text" value="{!v.caseSubject}"/>
+        </div>
+        <div>
+            <p class="slds-text-heading_small slds-m-bottom--small">{!$Label.c.LTS_DescribeProblem}</p>
+            <lightning:textarea class="caseBody" name="myTextArea" value="{!v.caseDescription}"
+                                label="" variant="label-hidden" maxlength="1000" />
+        </div>
+        <lightning:layout horizontalAlign="center">
+            <lightning:button onclick="{!c.cancelCase}" class="slds-button_text-destructive">{!$Label.c.LTS_Cancel}</lightning:button>
+            <lightning:button onclick="{!c.createCase}" >{!$Label.c.LTS_Create}</lightning:button>
+        </lightning:layout>
+    </div>
+</aura:component>

@@ -160,6 +160,18 @@
                           <MetadataEntry>
                             <option name="name" value="viewSurveyResultsComponentController" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ComplainsController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CaseHandler" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CustomSettingsUtils" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -363,6 +375,22 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="searchDivisionsFormResults" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_OrderDetails" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_ComplainCase" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_CaseList" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LTS_OrderCaseDetails" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
